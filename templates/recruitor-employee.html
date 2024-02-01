@@ -1,0 +1,39 @@
+{% extends "recruitor-base.html" %} {% block title %} Your Dashboard {% endblock title %} {% block body %}
+
+<div class="packages-box">
+	<h2>List of Selected Employees</h2>
+
+	<div class="packages-table table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Employee Name</th>
+					<th>Company Mail</th>
+					<th>Recruited Date</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for employee in employees %}
+				<tr>
+					<td><a href="#">{{employee.comon_username}}</a></td>
+					<td>{{employee.comon_email}}</td>
+					<td>{{employee.comon_date_created}}</td>
+					<td>
+						<a
+							href="#"
+							type="button"
+							class="btn btn-dark btn-sm mx-1"
+							style="color: white"
+							>Message</a
+						>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,2995 @@
+// Responsive CSS
+@media only screen and (max-width: 767px) {
+    /*Default CSS*/
+    p {
+        font-size: 15px;
+    }
+    .ptb-100 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .pt-100 {
+        padding-top: 50px;
+    }
+    .pb-100 {
+        padding-bottom: 50px;
+    }
+    .pb-75 {
+        padding-bottom: 25px;
+    }
+    .section-title-wrap {
+        text-align: left;
+        margin-bottom: 35px;
+
+        .title-content {
+            h2 {
+                font-size: 25px;
+            }
+        }
+        .title-btn {
+            text-align: left;
+            margin-top: 25px;
+        }
+    }
+    .section-title {
+        margin-bottom: 35px;
+
+        h2 {
+            font-size: 25px;
+        }
+        .section-layer-shape {
+            display: none;
+        }
+    }
+    .default-btn {
+        padding: 12px 45px 12px 12px;
+        font-size: 14px;
+
+        i {
+            right: 7px;
+            height: 25px;
+            width: 25px;
+            line-height: 25px;
+            font-size: 12px;
+        }
+    }
+
+    /*Main Banner Area CSS*/
+    .main-banner-area {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .main-banner-text-with-image {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .main-banner-content {
+        h1 {
+            font-size: 30px;
+        }
+        .banner-btn {
+            margin-top: 25px;
+        }
+        .layer-shape {
+            display: none;
+        }
+    }
+    .main-banner-area-with-bg-image {
+        padding-top: 190px;
+        padding-bottom: 50px;
+
+        .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    .main-banner-content-with-search {
+        h1 {
+            font-size: 35px;
+        }
+        .banner-search-form {
+            .form-group {
+                margin-bottom: 5px;
+
+                label {
+                    left: 22px;
+                    font-size: 18px;
+                    top: 15px;
+                }
+                .form-control {
+                    height: 50px;
+                }
+                .selectize-input {
+                    padding: 12px 20px 12px 50px;
+                }
+            }
+            .search-btn {
+                padding: 12px 30px;
+                font-size: 14px;
+            }
+        }
+    }
+    .main-banner-area-wrap {
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .container-fluid {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &::before {
+            display: none;
+        }
+    }
+    .main-banner-content-wrap {
+        margin-top: 0;
+
+        h1 {
+            font-size: 35px;
+        }
+        .banner-search-form {
+            padding: 5px 15px 5px 15px;
+
+            .form-group {
+                margin-bottom: 5px;
+
+                label {
+                    left: 22px;
+                    font-size: 18px;
+                    top: 15px;
+                }
+                .form-control {
+                    height: 50px;
+                }
+                .selectize-input {
+                    padding: 12px 20px 12px 50px;
+                }
+            }
+            .search-btn {
+                position: relative;
+                right: 0;
+                top: unset;
+                transform: unset;
+                padding: 0;
+                
+                button {
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .main-banner-wrap-image {
+        text-align: center;
+        margin-top: 35px;
+    }
+
+    /*Play Video Area CSS*/
+    .play-video-content {
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+
+        .play-btn {
+            position: relative;
+            top: unset;
+            transform: unset;
+            margin-bottom: 25px;
+
+            .video-btn {
+                width: 55px;
+                height: 55px;
+                line-height: 62px;
+                font-size: 25px;
+            }
+        }   
+        .layer-shape {
+            display: none;
+        }
+        h3 {
+            font-size: var(--font-size);
+            margin-top: 20px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+    .play-video-inner-box-image {
+        .video-content {
+            position: relative;
+            right: 0;
+            top: unset;
+            transform: unset;
+            padding: 20px;
+            text-align: center;
+            margin-top: 25px;
+
+            .play-btn {
+                position: relative;
+                top: unset;
+                transform: unset;
+                left: 0;
+    
+                .video-btn {
+                    width: 55px;
+                    height: 55px;
+                    line-height: 62px;
+                    font-size: 25px;
+                }
+            }  
+            h3 {
+                margin-top: 20px;
+                font-size: 22px;
+            }
+            .layer-shape {
+                display: none;
+            }
+        }
+    }
+
+    /*Featured Candidates Area CSS*/
+    .featured-candidates-image {
+        .row {
+            .col-lg-4 {
+                &:nth-child(1) {
+                    .image {
+                        top: 40px;
+                    }
+                }
+                &:nth-child(3) {
+                    .image {
+                        top: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .featured-candidates-content {
+        h3 {
+            font-size: 25px;
+        }
+        .layer-shape {
+            display: none;
+        }
+    }
+    .featured-candidates-item {
+        padding-left: 0;
+        margin-top: 30px;
+
+        .featured-candidates-btn {
+            text-align: center;
+        }
+    }
+    .featured-candidates-box {
+        padding: 30px;
+
+        .candidates-box-content {
+            padding-left: 0;
+
+            .image {
+                position: relative;
+                margin-bottom: 15px;
+            }
+            .content {
+                .rating {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+
+                    i {
+                        font-size: 12px;
+                    }
+                }
+                .job-info {
+                    li {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .featured-candidates-hire {
+            margin-top: 15px;
+            text-align: left;
+
+            .job-other-info {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .featured-candidates-shape {
+        display: none;
+    }
+    .featured-candidates-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .featured-candidates-search-box {
+        h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .candidates-search-form {
+            padding: 5px 15px 5px 15px;
+    
+            .form-group {
+                margin-bottom: 5px;
+
+                label {
+                    left: 22px;
+                    font-size: 18px;
+                    top: 15px;
+                }
+                .form-control {
+                    height: 50px;
+                }
+                .selectize-input {
+                    padding: 12px 20px 12px 50px;
+                }
+            }
+            .search-btn {
+                position: relative;
+                right: 0;
+                top: unset;
+                transform: unset;
+                padding: 0;
+                
+                button {
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .featured-candidates-with-max-width {
+        .featured-candidates-box {
+            .featured-candidates-hire {
+                text-align: left;
+            }
+        }
+    }
+
+    /*Inner Wrapper CSS*/
+    .inner-wrapper-sticky {
+        position: relative !important;
+        bottom: unset !important;
+        width: unset !important;
+        transform: unset !important;
+    }
+
+    /*Review Area CSS*/
+    .review-title {
+        h2 {
+            font-size: 25px;
+        }
+        .layer-shape {
+            display: none;
+        }
+    }
+    .review-single-card {
+        .review-content {
+            margin-top: 15px;
+
+            p {
+                font-size: 15px;
+            }
+        }
+        .review-info {
+            padding-left: 85px;
+
+            .image {
+                img {
+                    max-width: 75px;
+                }
+            }
+            .content {
+                top: 0;
+
+                h3 {
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                }
+                span {
+                    font-size: 12px;
+                }
+                .rating {
+                    margin-top: 5px;
+                    
+                    i {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .review-slides {
+        max-width: 100%;
+    
+        &.owl-theme {
+            .owl-nav {
+                margin-top: 25px;
+
+                [class*=owl-] {
+                    position: relative;
+                    top: 0;
+                    transform: unset;
+                    left: 0;
+                    opacity: 1;
+                    visibility: visible;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 45px;
+                    font-size: 30px;
+                    margin: 0 5px;
+    
+                    &.owl-next {
+                        left: auto;
+                        right: 0;
+                    }
+                    &:hover {
+                        color: var(--white-color);
+                        background-color: var(--main-color);
+                    }
+                }
+            }
+            &:hover {
+                .owl-nav {
+                    [class*=owl-] {
+                        left: 0;
+        
+                        &.owl-next {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*Partner Area CSS*/
+    .partner-image {
+        .row {
+            .col-lg-4 {
+                &:nth-child(1) {
+                    .image {
+                        margin-bottom: 30px;
+                    }
+                }
+                &:nth-child(2) {
+                    .image {
+                        margin-bottom: 30px;
+                    }
+                }
+                &:nth-child(3) {
+                    .image {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+        .image {
+            margin-bottom: 30px;
+
+            img {
+                max-width: 100px;
+            }
+        }
+    }
+    .partner-content {
+        h3 {
+            font-size: 25px;
+        }
+        .layer-shape {
+            display: none;
+        }
+    }
+
+    /*Mobile App Area CSS*/
+    .mobile-app-area {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-top: 1px solid #dacfcf;
+
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .mobile-app-content {
+        h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+        .layer-shape {
+            display: none;
+        }
+        .mobile-app-btn-list {
+            margin-top: 25px;
+
+            li {
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .mobile-app-image {
+        padding: 20px;
+        margin-top: 30px;
+
+        &.left-image {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+    .mobile-app-shape {
+        display: none;
+    }
+    .mobile-app-shape-2 {
+        display: none;
+    }
+
+    /*Pricing Area CSS*/
+    .single-pricing-table {
+        .pricing-icon {
+            margin-top: 20px;
+            margin-bottom: 10px;
+
+            i {
+                font-size: 62px;
+            }
+            .back-icon {
+                i {
+                    font-size: 85px;
+                }
+            }
+        }
+        .pricing-header {
+            h3 {
+                font-size: 18px;
+            }
+        }
+        .price {
+            font-size: 35px;
+            margin-top: 10px;
+            margin-bottom: 12px;
+        }
+        .pricing-features-list {
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+
+    /*Newsletter Area CSS*/
+    .newsletter-content {
+        h3 {
+            font-size: 25px;
+        }
+        .layer-shape {
+            display: none;
+        }
+        .newsletter-form {
+            margin-top: 25px;
+        }
+    }
+    .newsletter-image {
+        margin-top: 25px;
+
+        .circle-pattern {
+            width: 295px;
+            height: 295px;
+        }
+    }
+
+    /*Blog Area CSS*/
+    .blog-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .blog-item-box {
+        .content {
+            margin-top: 30px;
+            margin-left: 0;
+
+            h3 {
+                font-size: 25px;
+            }
+            .layer-shape {
+                display: none;
+            }
+        }
+        &.left-box {
+            .content {
+                margin-top: 0;
+                margin-right: 0;
+                text-align: center;
+            }
+            .blog-slides {
+                margin-left: 0;
+            }
+        }
+    }
+    .blog-slides {
+        margin-left: 0;
+
+        &.owl-theme {
+            .owl-nav {
+                [class*=owl-] {
+                    position: relative;
+                    top: 0;
+                    transform: unset;
+                    left: 0;
+                    opacity: 1;
+                    visibility: visible;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 45px;
+                    font-size: 30px;
+                    margin: 0 5px;
+    
+                    &.owl-next {
+                        left: auto;
+                        right: 0;
+                    }
+                    &:hover {
+                        color: var(--white-color);
+                        background-color: var(--main-color);
+                    }
+                }
+            }
+            &:hover {
+                .owl-nav {
+                    [class*=owl-] {
+                        left: 0;
+        
+                        &.owl-next {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blog-large-image {
+        &.right-image {
+            margin-top: 25px;
+        }
+    }
+    .blog-single-card {
+        .blog-content {
+            h3 {
+                font-size: 18px;
+            }
+            span {
+                font-size: 14px;
+                padding-left: 20px;
+
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    /*About Area CSS*/
+    .about-image {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .about-content {
+        padding-left: 0;
+
+        h3 {
+            font-size: 25px;
+        }
+        .about-fun-fact {
+            padding: 15px;
+
+            h3 {
+                font-size: 28px;
+                
+                .sign-icon {
+                    font-size: 28px;
+                }
+            }
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+
+    /*Job Seeker Area CSS*/
+    .seeker-arrow-icon {
+        display: none;
+    }
+
+    /*Job List Area CSS*/
+    .single-job-list-card {
+        padding: 20px;
+        margin-bottom: 25px;
+        margin-left: 0;
+        margin-right: 0;
+
+        .job-information {
+            padding-left: 60px;
+
+            .company-logo {
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+
+                img {
+                    max-width: 25px;
+                }
+            }
+        }
+        .job-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+        .job-btn {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+            text-align: left;
+            margin-top: 25px;
+        }
+    }
+    .company-box-logo {
+        margin-bottom: 15px;
+    }
+    .job-list-inner-box {
+        padding: 20px;
+
+        .job-list-box {
+            .job-information {
+                padding-left: 0;
+
+                .title-box {
+                    position: relative;
+                }
+                .job-tag-list {
+                    margin-top: 15px;
+
+                    li {
+                        font-size: 12px;
+                        padding: 5px 5px;
+                    }
+                }
+            }
+            .location-information {
+                margin-top: 20px;
+
+                li {
+                    margin-bottom: 10px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .job-list-optional {
+            text-align: left;
+            margin-top: 25px;
+
+            .save-text {
+                margin-left: 0;
+                margin-top: 10px;
+                text-align: left;
+            }
+        }
+    }
+    .single-job-list-box {
+        padding: 20px 15px;
+
+        .job-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+    }
+    .job-list-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .job-list-search-box {
+        h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .job-list-search-form {
+            padding: 5px 15px 5px 15px;
+    
+            .form-group {
+                margin-bottom: 5px;
+
+                label {
+                    left: 22px;
+                    font-size: 18px;
+                    top: 15px;
+                }
+                .form-control {
+                    height: 50px;
+                }
+                .selectize-input {
+                    padding: 12px 20px 12px 50px;
+                }
+            }
+            .search-btn {
+                position: relative;
+                right: 0;
+                top: unset;
+                transform: unset;
+                padding: 0;
+                
+                button {
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    /*Overview Area CSS*/
+    .overview-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .overview-content {
+        h3 {
+            font-size: 25px;
+        }
+    }
+    .overview-shape {
+        display: none;
+    }
+    .overview-image {
+        padding: 25px;
+        border-radius: 10px;
+        margin-top: 25px;
+    }
+
+    /*Candidates Area CSS*/
+    .single-candidates-card {
+        .candidates-information-box {
+            padding-left: 0;
+
+            .image {
+                position: relative;
+                margin-bottom: 18px;
+            }
+            .content {
+                .job-info {
+                    li {
+                        font-size: 14px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*Page Banner Area CSS*/
+    .page-banner-area {
+        height: 420px;
+    }
+    .page-banner-content {
+        margin-top: 130px;
+
+        h2 {
+            font-size: 30px;
+        }
+    }
+
+    /*Page Banner Area CSS*/
+    .faq-box-content {
+        h3 {
+            font-size: 25px;
+        }
+    }
+    .faq-accordion {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    /*Profile Authentication Area CSS*/
+    .profile-authentication-tabs {
+        .authentication-tabs-list {
+            .nav {
+                .nav-item {
+                    .nav-link {
+                        font-size: 14px;
+                        padding: 10px 10px;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            padding: 30px 20px 30px;
+        }
+        .eeza-authentication-form {
+            form {
+                .lost-your-password-wrap {
+                    text-align: left;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    /*Terms of Service Area CSS*/
+    .terms-of-service-content {
+        h3 {
+            font-size: 20px;
+        }
+    }
+    
+    /*Privacy Policy Area CSS*/
+    .privacy-policy-content {
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    /*404 Error Area CSS*/
+    .error-content {
+        h3 {
+            font-size: 24px;
+        }
+    }
+
+    /*Coming Soon Area CSS*/
+    .coming-soon-area {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .coming-soon-content {
+        padding: 30px 25px;
+
+        #timer {
+            margin-top: 20px;
+
+            div {
+                width: 100px;
+                height: 105px;
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+        }
+        h2 {
+            font-size: 22px;
+        }
+    }
+
+    /*Contact Area CSS*/
+    .contact-address {
+        h3 {
+            font-size: 22px;
+        }
+        .address-info {
+            margin-right: 0;
+
+            li {
+                font-size: 14px;
+            }
+        }
+    }
+    .contact-form {
+        margin-top: 30px;
+        
+        h3 {
+            font-size: 22px;
+        }
+        form {
+            .form-group {
+                .form-control {
+                    height: 50px;
+                    padding: 15px 18px;
+                }
+            }
+        }
+    }
+    #map {
+        margin-top: 50px;
+    }
+
+    /*Widget Sidebar CSS*/
+    .widget-area {
+        padding-left: 0;
+        margin-top: 30px;
+
+        .widget {
+            .widget-title {
+                font-size: 20px;
+            }
+        }
+    }
+
+    /*Blog Details Area CSS*/
+    .blog-details-area {
+        .widget-area {
+            padding-left: 0;
+            padding-right: 0;
+            margin-top: 0;
+            margin-bottom: 30px;
+
+            .widget_author {
+                .author-box {
+                    padding: 25px;
+
+                    h3 {
+                        font-size: 18px;
+                        margin-bottom: 12px;
+                    }
+                    .author-social-links {
+                        margin-top: 15px;
+
+                        li {
+                            a {
+                                i {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blog-details-desc {
+        .article-content {
+            h3 {
+                font-size: 25px;
+            }
+            .entry-meta {
+                li {
+                    margin-right: 5px;
+                    padding-left: 20px;
+                    font-size: 14px;
+
+                    i {
+                        font-size: 15px;
+                    }
+                }
+            }
+            .article-footer {
+                text-align: center;
+
+                .article-tags {
+                    a {
+                        padding: 5px 10px;
+                        font-size: 12px;
+                    }
+                }
+                .article-share {
+                    margin-top: 20px;
+
+                    .social {
+                        text-align: center;
+                    }
+                }
+            }
+            .article-post-navigation {
+                .nav-next {
+                    margin-top: 30px;
+                }
+            }
+        }
+        .article-comments {
+            .comments-list {
+                padding-left: 0;
+                margin-bottom: 30px;
+
+                img {
+                    position: relative;
+                    left: 0;
+                    margin-bottom: 18px;
+                }
+                &.children {
+                    margin-left: 0;
+                }
+            }
+        }
+        .article-leave-comment {
+            form {
+                .form-group {
+                    .form-control {
+                        height: 50px;
+                        padding: 15px 20px;
+                    }
+                    textarea {
+                        &.form-control {
+                            height: 95px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*Pagination CSS*/
+    .pagination-area {
+        .page-numbers {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            margin: 0 2px;
+        }
+    }
+
+    /*Shop Area CSS*/
+    .eeza-grid-sorting {
+        .result-count {
+            p {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .single-products-box {
+        .products-content {
+            h3 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    /*Shop Details Area CSS*/
+    .products-details-desc {
+        padding-left: 0;
+        margin-top: 30px;
+
+        h3 {
+            font-size: 22px;
+        } 
+        .products-add-to-cart {
+            .input-counter {
+                max-width: 110px;
+                min-width: 135px;
+            }  
+        }     
+    }
+    .products-details-tabs {
+        .nav {
+            .nav-item {
+                .nav-link {
+                    font-size: 18px;
+                }
+            }
+        }
+        .tab-content {
+            .tab-pane {
+                .products-reviews {
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+                .products-review-comments {
+                    h3 {
+                        font-size: 20px;
+                    }
+                    .user-review {
+                        padding: 20px 0 20px 70px;
+
+                        img {
+                            width: 60px;
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*Cart Area CSS*/
+    .cart-table {
+        table {
+            thead {
+                tr {
+                    th {
+                        padding: 25px 65px;
+                    }
+                }
+            }
+        }
+    }
+    .cart-buttons {
+        text-align: center;
+        
+        .default-btn {
+            margin-top: 15px;
+        }
+    }
+    .cart-totals {
+        padding: 25px;
+
+        h3 {
+            font-size: 20px;
+        }
+    }
+
+    /*Checkout Area CSS*/
+    .order-details {
+        margin-top: 30px;
+    }
+    
+    /*Job Details Area CSS*/
+    .job-details-desc {
+        h2 {
+            font-size: 25px;
+        }
+        .job-article-footer {
+            text-align: center;
+
+            .article-tags {
+                a {
+                    padding: 5px 5px;
+                    font-size: 14px;
+                }
+            }
+            .article-share {
+                .social {
+                    text-align: center;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+    .related-jobs-box {
+        h3 {
+            font-size: 22px;
+        }
+    }
+    .job-details-information {
+        padding: 25px 15px;
+        margin-top: 30px;
+
+        .information-list-box {
+            li {
+                font-size: 15px;
+            }
+        }
+    }
+
+    /*Candidates Details Area CSS*/
+    .candidates-details-sticky {
+        position: unset !important;
+        height: unset !important;
+    }
+    .candidates-details-information {
+        padding: 15px;
+        margin-right: 0;
+    }
+    .candidates-details-desc {
+        margin-top: 30px;
+
+        .candidates-desc-content {
+            h3 {
+                font-size: 22px;
+            }
+            .candidates-desc-list {
+                .list-box {
+                    h4 {
+                        font-size: var(--font-size);
+                    }
+                }
+            }
+            .candidates-comments-list {
+                padding-left: 60px;
+
+                img {
+                    max-width: 50px;
+                }
+                &.children {
+                    margin-left: 0;
+                }
+                .rating {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /*Employers Area CSS*/
+    .single-employer-item {
+        padding: 20px;
+
+        .company-logo {
+            height: 75px;
+            width: 75px;
+            line-height: 75px;
+    
+            img {
+                max-width: 45px;
+            }
+        }
+        .employer-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+    }
+
+    /*Employers Details Area CSS*/
+    .employers-details-desc {
+        .employers-desc-content {
+            h3 {
+                font-size: 20px;
+            }
+        }
+        .employers-desc-comments-content {
+            .employers-comments-list {
+                padding-left: 65px;
+
+                img {
+                    max-width: 55px;
+                }
+                &.children {
+                    margin-left: 0;
+                }
+                .rating {
+                    display: none;
+                }
+            }
+        }
+    }
+    .employers-details-information {
+        padding: 20px;
+        margin-left: 0;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    /*Job List Area CSS*/
+    .company-box-logo {
+        height: 100px;
+        width: 100%;
+        line-height: 100px;
+
+        img {
+            max-width: 30px;
+        }
+    }
+
+    /*Profile Authentication Area CSS*/
+    .profile-authentication-tabs {
+        .eeza-authentication-form {
+            form {
+                .lost-your-password-wrap {
+                    text-align: right;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    /*Featured Candidates Area CSS*/
+    .featured-candidates-box {
+        .featured-candidates-hire {
+            margin-top: 0;
+            text-align: right;
+        }
+    }
+
+    /*Banner CSS*/
+    .main-banner-area-with-bg-image {
+        .container-fluid {
+            max-width: 540px;
+        }
+    }
+    .main-banner-area-wrap {
+        .container-fluid {
+            max-width: 540px;
+        }
+    }
+
+    /*Partner CSS*/
+    .partner-image {
+        .image {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /*Default CSS*/
+    .ptb-100 {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .pt-100 {
+        padding-top: 70px;
+    }
+    .pb-100 {
+        padding-bottom: 70px;
+    }
+    .pb-75 {
+        padding-bottom: 45px;
+    }
+    .section-title-wrap {
+        text-align: left;
+
+        .title-content {
+            h2 {
+                font-size: 35px;
+            }
+        }
+        .title-btn {
+            text-align: left;
+            margin-top: 25px;
+        }
+    }
+    .section-title {
+        h2 {
+            font-size: 35px;
+        }
+        .section-layer-shape {
+            display: none;
+        }
+    }
+    .topbar-area {
+        .container-fluid {
+            max-width: 768px;
+        }
+    }
+
+    /*Main Banner Area CSS*/
+    .main-banner-area {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .main-banner-text-with-image {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    .main-banner-content {
+        h1 {
+            font-size: 45px;
+        }
+        .banner-btn {
+            margin-top: 25px;
+        }
+        .layer-shape {
+            display: none;
+        }
+    }
+    .main-banner-area-with-bg-image {
+        padding-top: 190px;
+        padding-bottom: 100px;
+
+        .container-fluid {
+            max-width: 720px;
+        }
+    }
+    .main-banner-content-with-search {
+        h1 {
+            font-size: 50px;
+        }
+        .banner-search-form {
+            .form-group {
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+        }
+    }
+    .main-banner-area-wrap {
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        .container-fluid {
+            max-width: 720px;
+        }
+        &::before {
+            display: none;
+        }
+    }
+    .main-banner-content-wrap {
+        margin-top: 0;
+
+        h1 {
+            font-size: 50px;
+        }
+        .banner-search-form {
+            padding: 5px 15px 5px 15px;
+
+            .form-group {
+                margin-bottom: 5px;
+            }
+            .search-btn {
+                position: relative;
+                right: 0;
+                top: unset;
+                transform: unset;
+                padding: 0;
+                
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .main-banner-wrap-image {
+        text-align: center;
+        margin-top: 35px;
+    }
+
+    /*Play Video Area CSS*/
+    .play-video-content {
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+
+        .play-btn {
+            position: relative;
+            top: unset;
+            transform: unset;
+        }   
+        .layer-shape {
+            display: none;
+        }
+        h3 {
+            font-size: 30px;
+            margin-top: 20px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+    .play-video-inner-box-image {
+        .video-content {
+            padding-left: 90px;
+
+            h3 {
+                font-size: 30px;
+            }
+        }
+    }
+
+    /*Featured Candidates Area CSS*/
+    .featured-candidates-image {
+        .row {
+            .col-lg-4 {
+                &:nth-child(1) {
+                    .image {
+                        top: 40px;
+                    }
+                }
+                &:nth-child(3) {
+                    .image {
+                        top: 40px;
+                    }
+                }
+            }
+        }
+    }
+    .featured-candidates-content {
+        h3 {
+            font-size: 30px;
+        }
+        .layer-shape {
+            display: none;
+        }
+    }
+    .featured-candidates-item {
+        padding-left: 0;
+        margin-top: 30px;
+
+        .featured-candidates-btn {
+            text-align: center;
+        }
+    }
+    .featured-candidates-box {
+
+        .candidates-box-content {
+            padding-left: 80px;
+
+            .image {
+                top: 5px;
+
+                img {
+                    border-radius: 5px;
+                    max-width: 65px;
+                }
+            }
+        }
+        .featured-candidates-hire {
+            text-align: right;
+        }
+    }
+    .featured-candidates-shape {
+        display: none;
+    }
+    .featured-candidates-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .featured-candidates-search-box {
+        h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .candidates-search-form {
+            padding: 5px 15px 5px 15px;
+    
+            .form-group {
+                margin-bottom: 5px;
+            }
+            .search-btn {
+                position: relative;
+                right: 0;
+                top: unset;
+                transform: unset;
+                
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /*Inner Wrapper CSS*/
+    .inner-wrapper-sticky {
+        position: relative !important;
+        bottom: unset !important;
+        width: unset !important;
+        transform: unset !important;
+    }
+
+    /*Review Area CSS*/
+    .review-title {
+        h2 {
+            font-size: 35px;
+        }
+        .layer-shape {
+            display: none;
+        }
+    }
+    .review-slides {
+        max-width: 100%;
+    
+        &.owl-theme {
+            .owl-nav {
+                margin-top: 25px;
+
+                [class*=owl-] {
+                    position: relative;
+                    top: 0;
+                    transform: unset;
+                    left: 0;
+                    opacity: 1;
+                    visibility: visible;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 45px;
+                    font-size: 30px;
+                    margin: 0 5px;
+    
+                    &.owl-next {
+                        left: auto;
+                        right: 0;
+                    }
+                    &:hover {
+                        color: var(--white-color);
+                        background-color: var(--main-color);
+                    }
+                }
+            }
+            &:hover {
+                .owl-nav {
+                    [class*=owl-] {
+                        left: 0;
+        
+                        &.owl-next {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*Partner Area CSS*/
+    .partner-image {
+        .row {
+            .col-lg-4 {
+                &:nth-child(1) {
+                    .image {
+                        margin-bottom: 30px;
+                    }
+                }
+                &:nth-child(2) {
+                    .image {
+                        margin-bottom: 30px;
+                    }
+                }
+                &:nth-child(3) {
+                    .image {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .partner-content {
+        margin-top: 30px;
+
+        h3 {
+            font-size: 30px;
+        }
+        .layer-shape {
+            display: none;
+        }
+    }
+
+    /*Mobile App Area CSS*/
+    .mobile-app-area {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        border-top: 1px solid #eee;
+
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .mobile-app-content {
+        max-width: 720px;
+
+        h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .layer-shape {
+            display: none;
+        }
+        .mobile-app-btn-list {
+            margin-top: 25px;
+        }
+    }
+    .mobile-app-image {
+        padding: 20px;
+        margin-top: 30px;
+
+        &.left-image {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+    .mobile-app-shape {
+        display: none;
+    }
+    .mobile-app-shape-2 {
+        display: none;
+    }
+
+    /*Pricing Area CSS*/
+    .single-pricing-table {
+        .pricing-icon {
+            margin-bottom: 10px;
+        }
+    }
+
+    /*Newsletter Area CSS*/
+    .newsletter-content {
+        h3 {
+            font-size: 30px;
+        }
+        .layer-shape {
+            display: none;
+        }
+        .newsletter-form {
+            margin-top: 25px;
+        }
+    }
+    .newsletter-image {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    /*Blog Area CSS*/
+    .blog-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .blog-item-box {
+        .content {
+            margin-top: 30px;
+            margin-left: 0;
+
+            h3 {
+                font-size: 30px;
+            }
+            .layer-shape {
+                display: none;
+            }
+        }
+        &.left-box {
+            .content {
+                margin-top: 0;
+                margin-right: 0;
+                text-align: center;
+            }
+            .blog-slides {
+                margin-left: 0;
+            }
+        }
+    }
+    .blog-slides {
+        margin-left: 0;
+
+        &.owl-theme {
+            .owl-nav {
+                [class*=owl-] {
+                    position: relative;
+                    top: 0;
+                    transform: unset;
+                    left: 0;
+                    opacity: 1;
+                    visibility: visible;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 45px;
+                    font-size: 30px;
+                    margin: 0 5px;
+    
+                    &.owl-next {
+                        left: auto;
+                        right: 0;
+                    }
+                    &:hover {
+                        color: var(--white-color);
+                        background-color: var(--main-color);
+                    }
+                }
+            }
+            &:hover {
+                .owl-nav {
+                    [class*=owl-] {
+                        left: 0;
+        
+                        &.owl-next {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .blog-large-image {
+        &.right-image {
+            margin-top: 25px;
+        }
+    }
+
+    /*About Area CSS*/
+    .about-image {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .about-content {
+        padding-left: 0;
+
+        h3 {
+            font-size: 35px;
+        }
+        .about-fun-fact {
+            padding: 15px;
+
+            h3 {
+                font-size: 35px;
+                
+                .sign-icon {
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+
+    /*Job Seeker Area CSS*/
+    .seeker-arrow-icon {
+        display: none;
+    }
+
+    /*Job List Area CSS*/
+    .single-job-list-card {
+        padding: 20px;
+        margin-bottom: 25px;
+        margin-left: 0;
+        margin-right: 0;
+
+        .job-information {
+            padding-left: 60px;
+
+            .company-logo {
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+
+                img {
+                    max-width: 25px;
+                }
+            }
+        }
+        .job-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+        .job-btn {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 1;
+            visibility: visible;
+            text-align: left;
+            margin-top: 25px;
+        }
+    }
+    .job-list-inner-box {
+        .job-list-box {
+            .job-information {
+                padding-left: 0;
+
+                .title-box {
+                    position: relative;
+                }
+                .job-tag-list {
+                    margin-top: 15px;
+                }
+            }
+            .location-information {
+                margin-top: 20px;
+            }
+        }
+        .job-list-optional {
+            text-align: left;
+            margin-top: 25px;
+
+            .save-text {
+                margin-left: 0;
+                margin-top: 10px;
+                text-align: left;
+            }
+        }
+    }
+    .single-job-list-box {
+        .job-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+    }
+    .job-list-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .job-list-search-box {
+        h3 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        .job-list-search-form {
+            padding: 5px 15px 5px 15px;
+    
+            .form-group {
+                margin-bottom: 5px;
+            }
+            .search-btn {
+                position: relative;
+                right: 0;
+                top: unset;
+                transform: unset;
+                
+                button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /*Overview Area CSS*/
+    .overview-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .overview-content {
+        max-width: 730px;
+
+        h3 {
+            font-size: 35px;
+        }
+    }
+    .overview-shape {
+        display: none;
+    }
+    .overview-image {
+        padding: 25px;
+        border-radius: 10px;
+        margin-top: 25px;
+    }
+    
+    /*Candidates Area CSS*/
+    .single-candidates-card {
+        .candidates-information-box {
+            padding-left: 75px;
+
+            .image {
+                top: 5px;
+
+                img {
+                    max-width: 60px;
+                }
+            }
+        }
+    }
+
+    /*Page Banner Area CSS*/
+    .page-banner-area {
+        height: 420px;
+    }
+    .page-banner-content {
+        h2 {
+            font-size: 50px;
+        }
+    }
+
+    /*Page Banner Area CSS*/
+    .faq-box-content {
+        h3 {
+            font-size: 35px;
+        }
+    }
+    .faq-accordion {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    /*Profile Authentication Area CSS*/
+    .profile-authentication-tabs {
+        .authentication-tabs-list {
+            .nav {
+                .nav-item {
+                    .nav-link {
+                        padding: 25px 60px;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            padding: 30px 20px 30px;
+        }
+    }
+
+    /*Contact Area CSS*/
+    .contact-address {
+        h3 {
+            font-size: 30px;
+        }
+        .address-info {
+            margin-right: 0;
+        }
+    }
+    .contact-form {
+        margin-top: 30px;
+        
+        h3 {
+            font-size: 30px;
+        }
+    }
+    #map {
+        margin-top: 50px;
+    }
+
+    /*Widget Sidebar CSS*/
+    .widget-area {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+    /*Blog Details Area CSS*/
+    .blog-details-area {
+        .widget-area {
+            padding-left: 0;
+            padding-right: 0;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+    .blog-details-desc {
+        .article-content {
+            .article-footer {
+                .article-tags {
+                    a {
+                        padding: 8px 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*Shop Details Area CSS*/
+    .products-details-desc {
+        padding-left: 0;
+        margin-top: 30px;
+
+        h3 {
+            font-size: 30px;
+        }     
+    }
+
+    /*Cart Area CSS*/
+    .cart-table {
+        table {
+            thead {
+                tr {
+                    th {
+                        padding: 25px 65px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*Checkout Area CSS*/
+    .order-details {
+        margin-top: 30px;
+    }
+
+    /*Job Details Area CSS*/
+    .job-details-desc {
+        h2 {
+            font-size: 35px;
+        }
+        .job-article-footer {
+            text-align: center;
+
+            .article-tags {
+                a {
+                    padding: 5px 5px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .job-details-information {
+        margin-top: 30px;
+
+        .information-box {
+            padding-left: 75px;
+
+            .company-logo {
+                height: 58px;
+                width: 58px;
+                line-height: 58px;
+
+                img {
+                    max-width: 30px;
+                }
+            }
+        }
+    }
+
+    /*Candidates Details Area CSS*/
+    .candidates-details-sticky {
+        position: unset !important;
+        height: unset !important;
+    }
+    .candidates-details-desc {
+        margin-top: 30px;
+    }
+    .candidates-details-information {
+        margin-right: 0;
+    }
+
+    /*Employers Area CSS*/
+    .single-employer-item {
+        padding: 20px;
+
+        .company-logo {
+            height: 75px;
+            width: 75px;
+            line-height: 75px;
+    
+            img {
+                max-width: 45px;
+            }
+        }
+        .employer-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+    }
+
+    /*Employers Details Area CSS*/
+    .employers-details-information {
+        margin-left: 0;
+        margin-top: 30px;
+        
+        .information-box {
+            padding-left: 75px;
+            
+            .company-logo {
+                height: 58px;
+                width: 58px;
+                line-height: 58px;
+
+                img {
+                    max-width: 45px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /*Default CSS*/
+    .section-title-wrap {
+        .title-content {
+            h2 {
+                font-size: 35px;
+            }
+        }
+    }
+    .section-title {
+        h2 {
+            font-size: 35px;
+        }
+    }
+
+    /*Main Banner Area CSS*/
+    .main-banner-content {
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .banner-btn {
+            margin-top: 25px;
+        }
+        .layer-shape {
+            top: 30%;
+            transform: translateY(-30%);
+        }
+    }
+    .main-banner-area-with-bg-image {
+        padding-top: 255px;
+
+        .container-fluid {
+            max-width: 992px;
+        }
+    }
+    .main-banner-content-with-search {
+        h1 {
+            font-size: 65px;
+        }
+    }
+    .main-banner-content-wrap {
+        h1 {
+            font-size: 50px;
+        }
+        .banner-search-form {
+            padding: 5px 55px 5px 15px;
+
+            .form-group {
+                label {
+                    left: 18px;
+                    font-size: 15px;
+                    top: 28px;
+                }
+                .form-control {
+                    padding: 12px 15px 15px 40px;
+                    font-size: 14px;
+                }
+                .selectize-input {
+                    padding: 22px 20px 22px 40px;
+                    font-size: 14px;
+
+                    &:after {
+                        right: 10px !important;
+                    }
+                }
+            }
+            .search-btn {
+                button {
+                    width: 35px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .main-banner-area-wrap {
+        .container-fluid {
+            max-width: 960px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    /*Play Video Area CSS*/
+    .play-video-content {
+        .layer-shape {
+            left: 55%;
+            transform: translateX(-55%);
+        }
+        h3 {
+            font-size: 35px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    /*Featured Candidates Area CSS*/
+    .featured-candidates-item {
+        padding-left: 0;
+    }
+    .featured-candidates-content {
+        h3 {
+            font-size: 30px;
+        }
+        .layer-shape {
+            top: 15%;
+            right: 10%;
+            transform: translateY(-15%) translateX(-10%);
+        }
+    }
+    .featured-candidates-box {
+        padding: 20px;
+
+        .candidates-box-content {
+            padding-left: 60px;
+
+            .image {
+                top: 5px;
+
+                img {
+                    border-radius: 5px;
+                    max-width: 45px;
+                }
+            }
+        }
+        .featured-candidates-hire {
+            text-align: right;
+
+            .job-other-info {
+                li {
+                    font-size: 11px;
+                    padding: 5px 5px;
+                    margin-right: 2px;
+                }
+            }
+            .default-btn {
+                padding: 15px 58px 16px 15px;
+                font-size: 14px;
+            }
+        }
+    }
+    .featured-candidates-shape {
+        display: none;
+    }
+    .featured-candidates-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+
+    /*Inner Wrapper CSS*/
+    .inner-wrapper-sticky {
+        position: relative !important;
+        bottom: unset !important;
+        width: unset !important;
+        transform: unset !important;
+        left: 0 !important;
+        top: 0 !important;
+    }
+
+    /*Review Area CSS*/
+    .review-title {
+        h2 {
+            font-size: 35px;
+        }
+        .layer-shape {
+            bottom: -20px;
+        }
+    }
+
+    /*Partner Area CSS*/
+    .partner-content {
+        h3 {
+            font-size: 35px;
+        }
+        .layer-shape {
+            top: 22%;
+            transform: translateY(-22%) translateX(-60%);
+        }        
+    }
+
+    /*Mobile App Area CSS*/
+    .mobile-app-content {
+        max-width: 455px;
+
+        h3 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .layer-shape {
+            top: 12%;
+            right: 12%;
+            transform: translateY(-12%) translateX(-12%);
+        }
+        .mobile-app-btn-list {
+            li {
+                .playstote-btn {
+                    padding: 12px 15px;
+                    font-size: 14px;
+                }
+                .applestore-btn {
+                    padding: 12px 15px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .mobile-app-shape {
+        display: none;
+    }
+
+    /*Newsletter Area CSS*/
+    .newsletter-content {
+        .layer-shape {
+            display: none;
+        }
+        .newsletter-form {
+            margin-top: 25px;
+        }
+    }
+    .newsletter-image {
+        .circle-pattern {
+            width: 485px;
+            height: 485px;
+        }
+    }
+
+    /*Blog Area CSS*/
+    .blog-area {
+        padding-bottom: 75px;
+
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .blog-item-box {
+        .content {
+            h3 {
+                font-size: 35px;
+            }
+        }
+        &.left-box {
+            .blog-slides {
+                margin-left: 80px;
+            }
+        }
+    }
+    .blog-slides {
+        margin-left: -80px;
+    }
+
+    /*About Area CSS*/
+    .about-content {
+        padding-left: 0;
+        
+        .about-fun-fact {
+            padding: 15px;
+
+            h3 {
+                font-size: 35px;
+                
+                .sign-icon {
+                    font-size: 35px;
+                }
+            }
+            p {
+                font-size: var(--font-size);
+            }
+        }
+    }
+
+    /*Job Seeker Area CSS*/
+    .seeker-arrow-icon {
+        display: none;
+    }
+
+    /*Job List Area CSS*/
+    .single-job-list-card {
+        padding: 20px 20px 45px;
+        margin-left: 0;
+        margin-right: 0;
+
+        .job-information {
+            padding-left: 60px;
+
+            .company-logo {
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+
+                img {
+                    max-width: 25px;
+                }
+            }
+        }
+        .job-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+        .job-btn {
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .single-job-list-box {
+        padding: 20px 20px;
+        margin-left: 0;
+        margin-right: 0;
+
+        .job-information {
+            padding-left: 60px;
+
+            .company-logo {
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+
+                img {
+                    max-width: 25px;
+                }
+            }
+        }
+        .job-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+    }
+    .job-list-inner-box {
+        .job-list-optional {
+            text-align: center;
+
+            .save-text {
+                margin-left: 0;
+                margin-top: 10px;
+                text-align: center;
+            }
+            .default-btn {
+                padding: 15px 55px 16px 15px;
+            }
+        }
+    }
+    .job-list-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+    .browse-jobs-btn {
+        margin-top: 20px;
+    }
+
+    /*Overview Area CSS*/
+    .overview-content {
+        max-width: 455px;
+
+        h3 {
+            font-size: 35px;
+        }
+    }
+    .overview-shape {
+        display: none;
+    }
+
+    /*Candidates Area CSS*/
+    .single-candidates-card {
+        .candidates-information-box {
+            padding-left: 60px;
+
+            .image {
+                top: 5px;
+
+                img {
+                    max-width: 50px;
+                }
+            }
+            .content {
+                .job-info {
+                    li {
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*Page Banner Area CSS*/
+    .page-banner-content {
+        margin-top: 80px;
+
+        h2 {
+            font-size: 60px;
+        }
+    }
+
+    /*Blog Details Area CSS*/
+    .blog-details-desc {
+        .article-content {
+            .article-footer {
+                .article-tags {
+                    a {
+                        padding: 8px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*Job Details Area CSS*/
+    .job-details-desc {
+        .job-article-footer {
+            .article-tags {
+                a {
+                    padding: 5px 6px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .job-details-information {
+        padding: 20px;
+
+        .information-list-box {
+            li {
+                font-size: 14px;
+                span {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    /*Candidates Details Area CSS*/
+    .candidates-details-information {
+        padding: 15px;
+        margin-right: 0;
+    }
+    .candidates-details-desc {
+
+        .candidates-desc-content {
+            h3 {
+                font-size: 22px;
+            }
+            .candidates-desc-list {
+                .list-box {
+                    h4 {
+                        font-size: var(--font-size);
+                    }
+                }
+            }
+        }
+    }
+
+    /*Employers Area CSS*/
+    .single-employer-item {
+        padding: 20px;
+
+        .company-logo {
+            height: 75px;
+            width: 75px;
+            line-height: 75px;
+    
+            img {
+                max-width: 45px;
+            }
+        }
+        .employer-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+    }
+
+    /*Employers Details Area CSS*/
+    .employers-details-information {
+        padding: 20px;
+        margin-left: 0;
+    }
+
+    /*Partner Area CSS*/
+    .partner-image {
+        .image {
+            img {
+                max-width: 115px;
+            }
+        }
+    }
+
+    /*Pricing Area CSS*/
+    .single-pricing-table {
+        .pricing-icon {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    /*Main Banner Area CSS*/
+    .main-banner-content-wrap {
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 15px;
+        }
+        .banner-search-form {
+            padding: 5px 55px 5px 15px;
+
+            .form-group {
+                label {
+                    left: 18px;
+                    font-size: 15px;
+                    top: 28px;
+                }
+                .form-control {
+                    padding: 12px 15px 15px 40px;
+                    font-size: 14px;
+                }
+                .selectize-input {
+                    padding: 22px 20px 22px 40px;
+                    font-size: 14px;
+
+                    &:after {
+                        right: 10px !important;
+                    }
+                }
+            }
+            .search-btn {
+                button {
+                    width: 35px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    /*Play Video Area CSS*/
+    .play-video-content {
+        h3 {
+            font-size: 35px;
+        }
+    }
+
+    /*Top Category Area CSS*/
+    .top-category-card {
+        padding: 20px 15px;
+
+        h3 {
+            font-size: 15px;
+
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+
+    /*Featured Candidates Area CSS*/
+    .featured-candidates-item {
+        padding-left: 0;
+    }
+    .featured-candidates-box {
+        padding: 20px;
+
+        .candidates-box-content {
+            padding-left: 60px;
+
+            .image {
+                img {
+                    border-radius: 5px;
+                    max-width: 45px;
+                }
+            }
+        }
+        .featured-candidates-hire {
+            text-align: right;
+
+            .job-other-info {
+                li {
+                    font-size: 11px;
+                    padding: 5px 5px;
+                    margin-right: 2px;
+                }
+            }
+            .default-btn {
+                padding: 15px 58px 16px 15px;
+                font-size: 14px;
+            }
+        }
+    }
+    .featured-candidates-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+
+    /*Mobile App Area CSS*/
+    .mobile-app-content {
+        max-width: 545px;
+    }
+
+    /*Blog Area CSS*/
+    .blog-area {
+        padding-bottom: 75px;
+    }
+    .blog-slides {
+        margin-left: -80px;
+    }
+
+    /*Job Seeker Area CSS*/
+    .seeker-arrow-icon {
+        z-index: 1;
+    }
+
+    /*Job List Area CSS*/
+    .single-job-list-card {
+        padding: 20px 20px 45px;
+        margin-left: 0;
+        margin-right: 0;
+
+        .job-information {
+            padding-left: 60px;
+
+            .company-logo {
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+
+                img {
+                    max-width: 25px;
+                }
+            }
+        }
+        .job-tag-list {
+            li {
+                font-size: 12px;
+                padding: 5px 5px;
+            }
+        }
+        .job-btn {
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .job-list-area {
+        .container-fluid {
+            padding-right: var(--bs-gutter-x,.75rem);
+            padding-left: var(--bs-gutter-x,.75rem);
+        }
+    }
+
+    /*Overview Area CSS*/
+    .overview-content {
+        max-width: 545px;
+    }
+
+    /*Candidates Area CSS*/
+    .single-candidates-card {
+        .candidates-information-box {
+            padding-left: 75px;
+
+            .image {
+                img {
+                    max-width: 60px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1449px) {
+    
+}
+
+@media only screen and (min-width: 1550px) {
+    /*Main Banner Area CSS*/
+    .main-banner-area-with-bg-image {
+        padding-top: 340px;
+        padding-bottom: 250px;
+        
+        .container-fluid {
+            max-width: 1920px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+    .main-banner-area-wrap {
+        .container-fluid {
+            max-width: 1920px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+
+    /*Play Video Area CSS*/
+    .play-video-content {
+        .layer-shape {
+            left: 35%;
+            transform: translateX(-35%);
+        }
+    }
+}

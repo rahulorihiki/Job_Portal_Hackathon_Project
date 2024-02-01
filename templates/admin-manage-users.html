@@ -1,0 +1,58 @@
+{% extends 'admin-base.html' %} {% block title %} Admin Dashboard {% endblock title %} {% block body %}
+
+<div class="manage-jobs-box">
+		<h3>Manage Users</h3>
+	</div>
+	<div class="manage-jobs-table table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th>Contact Number</th>
+					<th>Age</th>
+					<th>Email</th>
+                    <th>City</th>
+                    <th>Country</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for user in users %}
+				<tr>
+					<td>
+						<h5>{{ user[1]}}</h5>
+						<span><i class="ri-map-pin-line"></i> {{user[4]}}</span>
+					</td>
+					<td><a href="#">{{user[5]}}</a></td>
+					<td>{{user[7]}}</td>
+                    <td>{{user[2]}}</td>
+					<td>{{user[12]}}</td>
+                    <td>{{user[11]}}</td>
+					<td>
+						<a href="{{url_for('remove_user' , a = user[1])}} " type="button" class="btn btn-dark btn-sm mx-1" style="color: white">Remove User <i class="ri-delete-bin-line" style="font-size: 13px; padding: 5px;"></i></a>
+					</td>
+				</tr>
+
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- End Manage Jobs Area -->
+
+<!-- Start Copyright Area -->
+<div class="copyrights-area">
+	<div class="row align-items-center">
+		<div class="col-lg-6 col-sm-6 col-md-6">
+			<p><i class="ri-copyright-line"></i> 2022 <a href="#">Jobify</a>. All rights reserved</p>
+		</div>
+
+		<!-- <div class="col-lg-6 col-sm-6 col-md-6 text-end">
+			<p>Designed by ❤️ <a href="https://envytheme.com/" target="_blank">EnvyTheme</a></p>
+		</div> -->
+	</div>
+</div>
+<!-- End Copyright Area -->
+
+{% endblock body %}

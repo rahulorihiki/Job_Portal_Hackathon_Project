@@ -1,0 +1,127 @@
+{% extends 'base.html'%} {% block title%} Job Details {% endblock title%} {% block body %}
+<div class="job-details-area ptb-100">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-12">
+				<div class="job-details-desc">
+					<h2>{{job.job_name}} - [{{job.company_name}}]</h2>
+					<p>
+						Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et
+						dolore magna aliquyam erat sed diam voluptua at vero eos et accusam et justo duo dolores et ea rebum. Stet
+						clita kasd gubergren no sea taki mata sanctus est Lorem ipsum dolor sit amet lorem ipsum dolor sit amet
+						consetetur.
+					</p>
+
+					<div class="job-details-content">
+						<h3>Job Description:</h3>
+
+						<pre>{{job.job_description}}</pre>
+					</div>
+
+					<div class="job-details-content">
+						<h3>Qualifications:</h3>
+						<p>{{job.qualification}}</p>
+					</div>
+
+					<div class="job-details-content">
+						<h3>About Company:</h3>
+						<p>{{job.about_company}}</p>
+					</div>
+					<div class="job-details-content">
+						<h3>City:</h3>
+						<p>{{job.city}}</p>
+					</div>
+					<div class="job-details-content">
+						<h3>Addreass:</h3>
+
+						<p>{{job.addreass}}</p>
+					</div>
+					<div class="job-details-content">
+						<h3>Country:</h3>
+						<p>{{job.country}}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-12">
+				<div class="job-details-sticky">
+					<div class="job-details-information">
+						<div class="information-box">
+							<!-- Yahape company ka icon daal -->
+							<!-- <div class="company-logo">
+								<img src="assets/images/job/job-1.png" alt="image" />
+							</div> -->
+
+							<h3>{{job.occupatn_title}}</h3>
+							<span>{{job.job_name}} – {{job.job_category}} {{job.company_name}}</span>
+						</div>
+
+						<ul class="information-list-box">
+							<li>
+								<div class="d-flex justify-content-between align-items-center">
+									<span><i class="ri-calendar-line"></i> Date Posted</span>
+									{{job.date_created}}
+								</div>
+							</li>
+
+							<li>
+								<div class="d-flex justify-content-between align-items-center">
+									<span><i class="ri-restart-line"></i>Expiration Date</span>
+									{{job.deadline}}
+								</div>
+							</li>
+
+							<li>
+								<div class="d-flex justify-content-between align-items-center">
+									<span><i class="ri-map-pin-line"></i> Location</span>{{job.city}}, {{job.country}}
+								</div>
+							</li>
+
+							<li>
+								<div class="d-flex justify-content-between align-items-center">
+									<span><i class="ri-briefcase-4-line"></i> Employment Type</span>
+									{{job.employment_type}}
+								</div>
+							</li>
+
+							<li>
+								<div class="d-flex justify-content-between align-items-center">
+									<span><i class="ri-time-line"></i>Duration</span>
+									{{job.duration_of_employment}}
+								</div>
+							</li>
+							<li>
+								<div class="d-flex justify-content-between align-items-center">
+									<span><i class="ri-window-fill"></i> Job Category</span>
+									{{job.job_category}}
+								</div>
+							</li>
+
+							<li>
+								<div class="d-flex justify-content-between align-items-center">
+									<span><i class="ri-mail-line"></i> Email Address</span>
+									{{job.email}}
+								</div>
+							</li>
+
+							<li>
+								<div class="d-flex justify-content-between align-items-center">
+									<span><i class="ri-money-dollar-circle-line"></i> Salary</span>
+									{{job.salary}}
+								</div>
+							</li>
+
+							<li>
+								<div class="d-flex justify-content-between align-items-center">
+									<span><i class="ri-line-chart-line"></i>Required Number of Employees</span>
+									{{job.required_employee}}
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{% endblock body %}
+</div>

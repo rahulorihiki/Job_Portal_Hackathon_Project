@@ -1,0 +1,78 @@
+{% extends 'recruitor-base.html'%} {% block title%} Check Vacancy {% endblock title%} {% block body %}
+
+<!-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 border-bottom">
+	<h1 class="h2 my-3" style="color: white">Job Vacancy</h1>
+	<div class="btn-toolbar mb-2 mb-md-0">
+		<div class="btn-group me-2">
+			<button type="button" class="btn btn-sm btn-outline-primary">Share</button>
+			<button type="button" class="btn btn-sm btn-outline-primary">Export</button>
+		</div>
+		<button type="button" class="btn btn-sm dropdown-toggle bg-primary text-white">
+			<span data-feather="calendar"></span>
+			This week
+		</button>
+	</div>
+</div> -->
+<div style=" text-align: center; position: absolute; right: 65px; padding: 5px 2px; ">
+	<a class="rahulbsdk" href="{{url_for('addjob' , rec_username = recruitor.username )}}">+ Add a new Job Vacancy</a>
+</div>
+<div
+	style="
+		background: url(/static/images/freepik-laptop.webp)
+			center center/cover no-repeat;
+	  	height: 365px;
+		margin-top: 5px;
+	"
+>
+
+	<canvas class="my-4 w-100" id="myChart" width="900" height="180"></canvas>
+</div>
+<div class="packages-box">
+	<h2>List of Job Vacany</h2>
+
+	<div class="packages-table table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Job Name</th>
+					<th>Company Name</th>
+					<th>Expiry</th>
+					<th>Employment Type</th>
+					<th>Required Employee</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for data in jobdata %}
+				<tr>
+					<td><a href="/jobdetails-2/{{data.sno}}">{{data.job_name}}</a></td>
+					<td>{{data.company_name}}</td>
+					<td>{{data.deadline}}</td>
+					<td>{{data.employment_type}}</td>
+					<td>{{data.required_employee}}</td>
+					<td>
+						<a
+							href="{{url_for('delete_vacancy', sno = data.sno , rec_username = recruitor.username)}}"
+							type="button"
+							class="btn btn-dark btn-sm mx-1"
+							style="color: white"
+							>Delete <i class="ri-delete-bin-line" style="font-size: 13px; padding: 5px;"></i></a
+						>
+						<a
+							href="{{url_for('update_vacancy' , sno = data.sno , rec_username = recruitor.username )}}"
+							type="button"
+							class="btn btn-success btn-sm mx-1"
+							style="color: white"
+							>Update <i class="ri-refresh-line" style="font-size: 13px; padding: 4px;"></i></a
+						>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- Start Packages Area -->
+
+{% endblock body%}

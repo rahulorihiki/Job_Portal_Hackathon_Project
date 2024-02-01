@@ -1,0 +1,216 @@
+{% extends 'recruitor-base.html'%} {% block title %} Update Job Vacancy {% endblock title%} {% block body %}
+
+<!-- Start Post a New Job Area -->
+<div class="post-a-new-job-box">
+	<h3>Update Job</h3>
+
+	<form action="/update/{{job.sno}}/{{recruitor.username}}" method="POST">
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Job Name</label>
+					<input type="text" class="form-control" value="{{job.job_name}}" name="jobname" />
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Job Description</label>
+					<textarea cols="30" rows="6" placeholder="Short description..." class="form-control" name="jobdescription">
+{{job.job_description}}</textarea
+					>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Occupation Title</label>
+					<input type="text" class="form-control" value="{{job.occupatn_title}}" name="occupationtitle" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Job Category</label>
+					<select
+						class="form-select form-select-lg mt-3 py-2 selectize-filter"
+						aria-label=".form-select-lg example"
+						name="jobcategory"
+					>
+						<option selected value="{{job.job_category}}">{{job.job_category}}</option>
+						<option value="IT">IT</option>
+						<option value="Buisness">Buissness</option>
+						<option value="Marketing">Marketing</option>
+						<option value="and many more">and many more</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Company Name</label>
+					<select
+						class="form-select form-select-lg mt-3 py-2 selectize-filter"
+						aria-label=".form-select-lg example"
+						name="companyname"
+					>
+						<option selected value="{{job.company_name}}">{{job.company_name}}</option>
+						<option value="Google">Google</option>
+						<option value="Hooli">Hooli</option>
+						<option value="Pied Piper">Pied Piper</option>
+						<option value="Facebook">Facebook</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>About Company</label>
+					<textarea cols="30" rows="6" placeholder="Short description..." class="form-control" name="aboutcompany">
+{{job.about_company}}</textarea
+					>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Salary</label>
+					<input type="text" class="form-control" value="{{job.salary}}" name="salary" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Email Address</label>
+					<input type="email" class="form-control" value="{{job.email}}" name="emailadd" />
+				</div>
+			</div>
+
+			<!-- <div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Job Type</label>
+
+					<select class="selectize-filter">
+						<option value="1">Select</option>
+						<option value="2">Banking</option>
+						<option value="3">Digital & Creative</option>
+						<option value="4">Human Resources</option>
+						<option value="5">Management</option>
+					</select>
+				</div>
+			</div> -->
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Type of Employment</label>
+					<select
+						class="form-select form-select-lg mt-3 py-2 selectize-filter"
+						aria-label=".form-select-lg example"
+						name="typeofemployment"
+					>
+						<option selected value="{{job.employment_type}}">{{job.employment_type}}</option>
+						<option value="Full Time">Full Time</option>
+						<option value="Part Time">Part Time</option>
+						<option value="Internship">Internship</option>
+						<option value="Training">Training</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Qualification</label>
+					<textarea cols="30" rows="6" placeholder="Qualification...." class="form-control" name="qualification">
+{{job.qualification}}</textarea
+					>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Duration of Employment</label>
+					<input type="text" class="form-control" value="{{job.duration_of_employment}}" name="duration" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Required No of Employee</label>
+					<input type="text" class="form-control" value="{{job.required_employee}}" name="employeenumber" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Gender</label>
+					<select
+						class="form-select form-select-lg mt-3 py-2 selectize-filter"
+						aria-label=".form-select-lg example"
+						name="genders"
+					>
+						<option selected value="{{job.gender}}">{{job.gender}}</option>
+						<option value="Any">Any</option>
+						<option value="Male Only">Male Only</option>
+						<option value="Female Only">Female Only</option>
+						<option value="Other">Other</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Application Deadline Date</label>
+					<input type="text" class="form-control" value="{{job.deadline}}" name="deadlines" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>City</label>
+					<input type="text" class="form-control" value="{{job.city}}" name="city" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Country</label>
+					<input type="text" class="form-control" value="{{job.country}}" name="country" />
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Complete Address</label>
+					<input type="text" class="form-control" value="{{job.addreass}}" name="addreass" />
+				</div>
+			</div>
+
+			<div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Latitude</label>
+					<input type="text" class="form-control" value="{{job.latitude}}" name="latitude" />
+				</div>
+			</div>
+
+			<div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Longitude</label>
+					<input type="text" class="form-control" value="{{job.longitude}}" name="longitude" />
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12">
+				<button type="submit" class="default-btn">Update Job </button>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- End Post a New Job Area -->
+<footer class="py-4 bg-light mt-auto">
+	<div class="container-fluid px-4">
+		<div class="d-flex align-items-center justify-content-between small">
+			<div class="text-muted">Copyright &copy; Jobify 2022</div>
+			<div>
+				<a href="#">Privacy Policy</a>
+				&middot;
+				<a href="#">Terms &amp; Conditions</a>
+			</div>
+		</div>
+	</div>
+</footer>
+
+{% endblock body%}

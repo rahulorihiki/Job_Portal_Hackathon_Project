@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl.css') }}" />
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/static/css/aos.css" />
+		<link rel="stylesheet" href="/static/css/animate.min.css" />
+		<link rel="stylesheet" href="/static/css/meanmenu.css" />
+		<link rel="stylesheet" href="/static/css/flaticon.css" />
+		<link rel="stylesheet" href="/static/css/remixicon.css" />
+		<link rel="stylesheet" href="/static/css/odometer.min.css" />
+		<link rel="stylesheet" href="/static/css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="/static/css/owl.theme.default.min.css" />
+		<link rel="stylesheet" href="/static/css/magnific-popup.min.css" />
+		<link rel="stylesheet" href="/static/css/fancybox.min.css" />
+		<link rel="stylesheet" href="/static/css/selectize.min.css" />
+		<link rel="stylesheet" href="/static/css/metismenu.min.css" />
+		<link rel="stylesheet" href="/static/css/simplebar.min.css" />
+		<link rel="stylesheet" href="/static/css/dropzone.min.css" />
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/static/css/navbar.css" />
+		<link rel="stylesheet" href="/static/css/footer.css" />
+		<link rel="stylesheet" href="/static/css/dashboard.css" />
+		<link rel="stylesheet" href="/static/css/responsive.css" />
+
+		<title>{% block title%}{% endblock title%}</title>
+		<!-- Our link to add icons -->
+		<link rel="icon" type="image/png" href="/static/images/favicon.png" />
+	</head>
+	<body class="px-0">
+		<!-- Start Sidemenu Area -->
+		<div class="sidemenu-area">
+			<div class="sidemenu-header">
+				<a href="candidates-dashboard.html" class="navbar-brand d-flex align-items-center">
+					<img src="/static/images/logo.png" alt="image" />
+				</a>
+
+				<div class="responsive-burger-menu d-block d-lg-none">
+					<span class="top-bar"></span>
+					<span class="middle-bar"></span>
+					<span class="bottom-bar"></span>
+				</div>
+			</div>
+
+			<div class="sidemenu-body">
+				<ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+					<li class="nav-item active">
+						<a href="{{url_for('admin_dashboard')}}" class="nav-link">
+							<span class="icon"><i class="ri-home-line"></i></span>
+							<span class="menu-title">Dashboard</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="{{url_for('display_company')}}" class="nav-link">
+							<span class="icon"><i class="ri-user-line"></i></span>
+							<span class="menu-title">Company</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="{{url_for('add_display_categories')}}" class="nav-link">
+							<span class="icon"><i class="ri-file-list-line"></i></span>
+							<span class="menu-title">Category</span>
+						</a>
+					</li>
+                    <li class="nav-item">
+						<a href="{{url_for('admin_job_vacancy')}}" class="nav-link">
+							<span class="icon"><i class="ri-notification-3-line"></i></span>
+							<span class="menu-title">Job Vacancy List</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="{{url_for('admin_appliedjob_list')}}" class="nav-link">
+							<span class="icon"><i class="ri-notification-3-line"></i></span>
+							<span class="menu-title">Applicants</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="{{url_for('manage_users')}}" class="nav-link">
+							<span class="icon"><i class="ri-book-line"></i></span>
+							<span class="menu-title">Manage Users</span>
+						</a>
+					</li>
+                    <li class="nav-item">
+						<a href="{{url_for('manage_recruitors')}}" class="nav-link">
+							<span class="icon"><i class="ri-book-line"></i></span>
+							<span class="menu-title">Manage Recruitors</span>
+						</a>
+					</li>
+                    <li class="nav-item">
+						<a href="candidates-dashboard-cv-manager.html" class="nav-link">
+							<span class="icon"><i class="ri-book-line"></i></span>
+							<span class="menu-title">Logout</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- End Sidemenu Area -->
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="container">
+                        <div class="main-responsive-menu">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="/static/images/logo.png" alt="logo" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="main-navbar">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            
+    
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+    
+                                <div class="others-options d-flex align-items-center p-3">
+                                    <div class="option-item">
+                                        <div class="dropdown profile-nav-item">
+                                            <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <div class="menu-profile">
+                                                    <img src="/static/images/dashboard/user1.jpg" class="rounded-circle" alt="image">
+                                                    <span class="name">My Account</span>
+                                                </div>
+                                            </a>
+                
+                                            <div class="dropdown-menu">
+                                                <div class="dropdown-header d-flex flex-column align-items-center">
+                                                    <div class="figure mb-3">
+                                                        <img src="/static/images/dashboard/user1.jpg" class="rounded-circle" style="height: 130px;width: 130px;" alt="image">
+                                                    </div>
+                
+                                                    <div class="info text-center">
+                                                        <span class="name">Admin123</span>
+                                                        <p class="mb-3 email">admin123@gmail.com</p>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="dropdown-body">
+                                                    <ul class="profile-nav p-0 pt-3">
+                                                        <li class="nav-item active">
+                                                            <a href="#" class="nav-link">
+                                                                <span class="icon"><i class="ri-home-line"></i></span>
+                                                                <span class="menu-title">Dashboard</span>
+                                                            </a>
+                                                        </li>
+    
+                                                        <li class="nav-item">
+                                                            <a href="dashboard-applicants.html" class="nav-link">
+                                                                <span class="icon"><i class="ri-file-list-line"></i></span>
+                                                                <span class="menu-title">All Applicants</span>
+                                                            </a>
+                                                        </li>
+                                    
+                                                        <li class="nav-item">
+                                                            <a href="candidates-dashboard-submit-resume.html" class="nav-link">
+                                                                <span class="icon"><i class="ri-bookmark-line"></i></span>
+                                                                <span class="menu-title">Submit Resumes</span>
+                                                            </a>
+                                                        </li>
+                                    
+                                                        <li class="nav-item">
+                                                            <a href="dashboard-packages.html" class="nav-link">
+                                                                <span class="icon"><i class="ri-stack-fill"></i></span>
+                                                                <span class="menu-title">Packages</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                
+                                                <div class="dropdown-footer">
+                                                    <ul class="profile-nav">
+                                                        <li class="nav-item">
+                                                            <a href="index.html" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Logout</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+            <!-- Breadcrumb Area -->
+            <div class="row">
+               <div class="breadcrumb-area col-md-2 col-lg-10 mt-3">
+                <h1>Howdy, Admin!!</h1>
+                <ol class="breadcrumb">
+                    <li class="item"><a href="candidates-dashboard.html">Home</a></li>
+                    <li class="item">Dashboard</li>
+                </ol>
+               </div>
+        </div>
+            <!-- End Breadcrumb Area -->
+            {% block body %}{% endblock body %}
+
+
+          <!-- Optional JavaScript; choose one of the two! -->
+		<script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+		<!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+	</body>
+</html> 

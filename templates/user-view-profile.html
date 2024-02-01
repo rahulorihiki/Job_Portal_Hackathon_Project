@@ -1,0 +1,71 @@
+{% extends "user-base.html" %} {% block title %} Your Profile {% endblock title %} {% block body %}
+<!-- <div class="row"> -->
+<div class="row job-details-desc">
+	<div class="job-details-content col-lg-3 col-md-12">
+		<h3>Username:</h3>
+		<p>{{user.username}}</p>
+	</div>
+	<div class="job-details-content col-lg-4 col-md-12">
+		<h3>Your Email:</h3>
+		<p>{{user.email}}</p>
+	</div>
+	<div class="job-details-content col-lg-3 col-md-12">
+		<h3>Your Current Job-Title:</h3>
+		<p>{{user.job_title}}</p>
+	</div>
+	<div class="job-details-content col-lg-3 col-md-12">
+		<h3>Your Phone Number:</h3>
+		<p>{{user.phone}}</p>
+	</div>
+	<div class="job-details-content col-lg-4 col-md-12">
+		<h3>Your Website URL:</h3>
+		<p>{{user.website_url}}</p>
+	</div>
+	<div class="job-details-content col-lg-3 col-md-12">
+		<h3>Your Age:</h3>
+		<p>{{user.age}}</p>
+	</div>
+	<div class="job-details-content col-lg-3 col-md-12">
+		<h3>Your Education Level:</h3>
+		<p>{{user.education_lvl}}</p>
+	</div>
+	<div class="job-details-content col-lg-3 col-md-12">
+		<h3>Experience:</h3>
+		<p>{{user.experience}}</p>
+	</div>
+	<div class="job-details-content col-lg-7 col-md-12">
+		<h3>Description:</h3>
+		<p>{{user.description}}</p>
+	</div>
+	<div class="job-details-content col-lg-3 col-md-12">
+		<h3>City:</h3>
+		<p>{{user.user_city}}</p>
+	</div>
+	<div class="job-details-content col-lg-3 col-md-12">
+		<h3>Country:</h3>
+		<p>{{user.user_country}}</p>
+	</div>
+	<div class="job-details-content col-lg-7 col-md-12">
+		<h3>Addreass:</h3>
+		<p>{{user.user_addreass}}</p>
+	</div>
+	<div class="job-details-content col-lg-5 col-md-12">
+		<h3>Facebook URL:</h3>
+		<p>{{user.facebook_url}}</p>
+	</div>
+	<div class="job-details-content col-lg-5 col-md-12">
+		<h3>Twitter URL:</h3>
+		<p>{{user.twitter_url}}</p>
+	</div>
+	<div class="job-details-content col-lg-5 col-md-12">
+		<h3>Linked In URL:</h3>
+		<p>{{user.linkedin_url}}</p>
+	</div>
+	<div class="job-details-content col-lg-5 col-md-12">
+		<h3>Instagram URL:</h3>
+		<p>{{user.insta_url}}</p>
+	</div>
+	<a class="rahulbs col-lg-4 col-md-12 my-5" href="{{url_for('update_profile' , c = user.username)}}" style="text-align: center;">Update Profile <i class="ri-refresh-line" style="font-size: 13px;"></i></a>
+</div>
+<!-- </div> -->
+{% endblock body %}

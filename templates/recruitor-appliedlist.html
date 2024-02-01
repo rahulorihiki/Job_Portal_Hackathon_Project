@@ -1,0 +1,49 @@
+{% extends 'recruitor-base.html' %} {% block title %} Application List {% endblock title %} {% block body %}
+
+<!-- Start Applicants Area -->
+<div class="all-applicants-box">
+    <h2>Applicants</h2>
+
+    <div class="row">
+        {% for applicant in totalappli %}
+        <div class="col-lg-6 col-md-12">
+            <div class="single-applicants-card">
+                <div class="image">
+                    <a href="#"><img src="/static/images/character-avatar.webp" alt="image" style="border: 1px solid white; border-radius: 100px;;"></a>
+                </div>
+
+                <div class="content">
+                    <h3>
+                        <a href="candidates-details-1.html">{{applicant[0]}}</a>
+                    </h3>
+                    <span>{{applicant[1]}}</span>
+                    <br>
+                    <p style="font-size: small;">Applied for <span>{{applicant[2]}}</span>  Role in <span>{{applicant[3]}}</span></p>
+
+                    <div class="applicants-footer">
+                        <ul class="option-list">
+                            <li>
+                                <a href="http://127.0.0.1:9555/show-resume/{{applicant[0]}}" class=" d-inline-block" target="_blank" title="View Application"><i class="ri-eye-line"></i></a>
+                                
+                            </li>
+                            <li>
+                                <a href="http://127.0.0.1:5000/approve-application/{{applicant[0]}}/{{applicant[5]}}/{{recruitor.code}}" class=" d-inline-block" title="Approve Application"><i class="ri-check-line"></i></a>
+                                
+                            </li>
+                            <li>
+                                <a href="http://127.0.0.1:9555/reject-application/{{applicant[0]}}/{{job_email}}/{{recruitor.username}}" class=" d-inline-block" title="Reject Application"><i class="ri-delete-bin-line"></i></a>
+                                
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <p>Applied Date: {{applicant[4]}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- Start Applicants Area -->
+
+{% endblock body %}

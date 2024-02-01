@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %} Confirm Application {% endblock title %} {% block body %}
+
+<h1>Are you sure that you want to apply for this jobbb</h1>
+<a class="rahulbs" href="{{url_for('viewresume' , e = user.username)}}" target="_blank">View Your Resume</a>
+<a class="rahulbs" href="{{url_for('resume' , d = user.username)}}" target="_blank">Update your Resume</a>
+<form action="http://127.0.0.1:9555/applyjob/{{user.username}}/{{job[0][7]}}/{{job[0][21]}}" method="POST">
+    <div class="col-lg-5 col-md-12">
+        <button type="submit" class="default-btn">Apply for this Job </button>
+    </div>
+</form>
+{% endblock body %}

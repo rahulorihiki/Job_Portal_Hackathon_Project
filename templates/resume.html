@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume</title>
+    <link rel="stylesheet" href="/static/resume-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left_side">
+            <div class="profile">
+                <div class="pfpImage">
+                    <img src="/static/images/character-avatar.webp" alt="image" style="border: 1px solid #003147; border-radius: 100px;" alt: "profile pic">
+                </div>
+                <h2>{{resume.name}}<br><span>{{resume.job_title}}</span></h2>
+            </div>
+            <div class="contact_info">
+                <h3 class="title">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="text">{{resume.contactno}}</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="text">{{resume.emailaddr}}</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="text">{{resume.linkedin_url}}</span>
+                    </li>
+                    <li>
+                        <span class="icon"></span>
+                        <span class="text">{{resume.city}}, {{resume.state}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact_info education">
+                <h3 class="title">Education</h3>
+                <ul>
+                    <li>
+                        <h5>Percentage : {{resume.percentage10}}</h5>
+                        <h4>{{resume.institute10}}</h4>
+                        <h4>{{resume.board10}}</h4>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <h5>Percentage : {{resume.percentage12}}</h5>
+                        <h4>{{resume.institute12}}</h4>
+                        <h4>{{resume.board12}}</h4>
+                    </li>
+                </ul>
+                <ul><pre>{{resume.others_education}}</pre></ul>
+            </div>
+            <div class="contact_info language">
+                <h3 class="title">Languages</h3>
+                <ul>
+                    <li>
+                        <span class="text">{{resume.l1}}</span>
+                        <span class="percent">
+                            <div style="width: 90%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">{{resume.l2}}</span>
+                        <span class="percent">
+                            <div style="width: 100%;"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text">{{resume.l3}}</span>
+                        <span class="percent">
+                            <div style="width: 40%;"></div>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right_side">
+            <div class="about">
+                <h2 class="title2">Profile</h2>
+                <p>{{resume.profile_desc}}</p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5>{{resume.exp_joining_year}}-Present</h5>
+                        <h5>{{resume.exp_company_name}}</h5>
+                    </div>
+                    <div class="text">
+                        <h4>{{resume.exp_job_title}}</h4>
+                        <p>{{resume.exp_job_desc}}</p>
+                    </div>
+                </div>
+                <!-- <div class="box">
+                    <div class="year_company">
+                        <h5>2017-2019</h5>
+                        <h5>Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Junior Web Developer</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, distinctio autem aspernatur quas quibusdam amet quasi labore sint placeat nobis?</p>
+                    </div>
+                </div> -->
+
+                <div class="about skills">
+                    <h2 class="title2">Professional Skills</h2>
+                    <div class="box">
+                        <h4>{{resume.pfs1}}</h4>
+                        <div class="percent">
+                            <div style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>{{resume.pfs2}}</h4>
+                        <div class="percent">
+                            <div style="width: 89%;"></div>
+                        </div>
+                    </div>    
+                    <div class="box">
+                        <h4>{{resume.pfs3}}</h4>
+                        <div class="percent">
+                            <div style="width: 78%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>{{resume.pfs4}}</h4>
+                        <div class="percent">
+                            <div style="width: 82%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h4>{{resume.pfs5}}</h4>
+                        <div class="percent">
+                            <div style="width: 78%;"></div>
+                        </div>
+                    </div>  
+                </div>
+
+                <div class="about interest">
+                    <h2 class="title2">Interest</h2>
+                    <pre>{{resume.interest}}</pre>
+                </div>
+            </div>   
+        </div>
+    </div>
+</body>
+</html>

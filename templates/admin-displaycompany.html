@@ -1,0 +1,65 @@
+{% extends 'admin-base.html'%} {% block title%} Check Affiliated Companies {% endblock title%} {% block body %}
+<!-- Start Manage Jobs Area -->
+<div class="manage-jobs-box">
+	<div class="row">
+		<h3 class="col-lg-9 col-sm-6 col-md-6 pt-3">Manage Affiliated Company</h3>
+		<a href="{{url_for('add_company')}}" class="rahulbsdk col-lg-2 col-sm-6 col-md-6 mb-2" style="text-align: center;">+ Add Company</a>
+	</div>
+	<div class="manage-jobs-table table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Company Name</th>
+					<th>Contact Number</th>
+					<th>Date Created</th>
+					<th>Status</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for rahu in rahul %}
+				<tr>
+					<td>
+						<h5>{{ rahu.comapanynaam}}</h5>
+						<span><i class="ri-map-pin-line"></i> {{rahu.companyaddress}}</span>
+					</td>
+					<td><a href="#">{{rahu.contactno}}</a></td>
+					<td>{{rahu.datecreated}}</td>
+					<td class="status">Active</td>
+					<td>
+						<a
+							href="{{ url_for('delete_company', name = rahu.comapanynaam)}} "
+							type="button"
+							class="btn btn-dark btn-sm mx-1"
+							style="color: white"
+							>Delete <i class="ri-delete-bin-line" style="font-size: 13px; padding: 5px;"></i></a
+						>
+						<a
+							href="{{url_for('update_company' , name = rahu.comapanynaam)}}"
+							type="button"
+							class="btn btn-success btn-sm mx-1"
+							style="color: white"
+							>Update <i class="ri-refresh-line" style="font-size: 13px; padding: 4px;"></i></a
+						>
+					</td>
+				</tr>
+
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- End Manage Jobs Area -->
+
+<!-- Start Copyright Area -->
+<div class="copyrights-area">
+	<div class="row align-items-center">
+		<div class="col-lg-6 col-sm-6 col-md-6">
+			<p><i class="ri-copyright-line"></i> 2022 <a href="#">Jobify</a>. All rights reserved</p>
+		</div>
+		
+	</div>
+</div>
+<!-- End Copyright Area -->
+{% endblock body %}

@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../../static/flaticon.ttf?10e8e1e7d1f5cd341e0d900fd834d828") format("truetype"),
+url("../../static/flaticon.woff?10e8e1e7d1f5cd341e0d900fd834d828") format("woff"),
+url("../../static/flaticon.woff2?10e8e1e7d1f5cd341e0d900fd834d828") format("woff2"),
+url("../../static/flaticon.eot?10e8e1e7d1f5cd341e0d900fd834d828#iefix") format("embedded-opentype"),
+url("../../static/flaticon.svg?10e8e1e7d1f5cd341e0d900fd834d828#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-facebook:before {
+    content: "\f101";
+}
+.flaticon-twitter:before {
+    content: "\f102";
+}
+.flaticon-instagram:before {
+    content: "\f103";
+}
+.flaticon-linkedin:before {
+    content: "\f104";
+}
+.flaticon-down-arrow:before {
+    content: "\f105";
+}
+.flaticon-padlock:before {
+    content: "\f106";
+}
+.flaticon-user:before {
+    content: "\f107";
+}
+.flaticon-plus:before {
+    content: "\f108";
+}
+.flaticon-edit:before {
+    content: "\f109";
+}
+.flaticon-placeholder:before {
+    content: "\f10a";
+}
+.flaticon-list:before {
+    content: "\f10b";
+}
+.flaticon-loupe:before {
+    content: "\f10c";
+}
+.flaticon-star:before {
+    content: "\f10d";
+}
+.flaticon-left-quote:before {
+    content: "\f10e";
+}
+.flaticon-list-1:before {
+    content: "\f10f";
+}
+.flaticon-spaceship:before {
+    content: "\f110";
+}
+.flaticon-calendar:before {
+    content: "\f111";
+}
+.flaticon-loading:before {
+    content: "\f112";
+}
+.flaticon-comment:before {
+    content: "\f113";
+}
+.flaticon-reload:before {
+    content: "\f114";
+}
+.flaticon-location:before {
+    content: "\f115";
+}
+.flaticon-volume:before {
+    content: "\f116";
+}
+.flaticon-layers:before {
+    content: "\f117";
+}
+.flaticon-briefcase:before {
+    content: "\f118";
+}
+.flaticon-money:before {
+    content: "\f119";
+}
+.flaticon-resume:before {
+    content: "\f11a";
+}
+.flaticon-telephone:before {
+    content: "\f11b";
+}
+.flaticon-email:before {
+    content: "\f11c";
+}
+.flaticon-user-1:before {
+    content: "\f11d";
+}
+.flaticon-mortarboard:before {
+    content: "\f11e";
+}
+.flaticon-trophy:before {
+    content: "\f11f";
+}
+.flaticon-star-of-favorites-outline:before {
+    content: "\f120";
+}
+.flaticon-google-glass-logo:before {
+    content: "\f121";
+}
+.flaticon-worldwide:before {
+    content: "\f122";
+}
+.flaticon-play-button-arrowhead:before {
+    content: "\f123";
+}
+.flaticon-right-arrow:before {
+    content: "\f124";
+}
+.flaticon-coin:before {
+    content: "\f125";
+}
+.flaticon-rocket-launch:before {
+    content: "\f126";
+}
+.flaticon-shuttle:before {
+    content: "\f127";
+}
+.flaticon-send:before {
+    content: "\f128";
+}
+.flaticon-a:before {
+    content: "\f129";
+}
+.flaticon-p:before {
+    content: "\f12a";
+}
+.flaticon-e:before {
+    content: "\f12b";
+}
+.flaticon-play-store:before {
+    content: "\f12c";
+}
+.flaticon-app-store:before {
+    content: "\f12d";
+}

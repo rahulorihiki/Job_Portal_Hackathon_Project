@@ -1,0 +1,179 @@
+{% extends "recruitor-base.html" %} {% block title %} Update your Profile {% endblock title %} {% block body %}
+
+<!-- Start My Profile Area -->
+<div class="my-profile-box">
+	<h3>Profile Details</h3>
+
+	<form action="/recruitor-updateprofile/{{recruitor.username}}" method="POST">
+		<div class="row">
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Username</label>
+					<input type="text" class="form-control" placeholder="Andy Smith" value="{{recruitor.username}}" name="user-name" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Email Addreass</label>
+					<input
+						type="email"
+						class="form-control"
+						placeholder="hello@andysmith.com"
+						value="{{recruitor.email}}"
+						name="email-addreass"
+					/>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Job Title</label>
+					<input type="text" class="form-control" value="{{recruitor.job_title}}" name="job-title" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Phone</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="+88 (123) 123456"
+						value="{{recruitor.phone}}"
+						name="phone-number"
+					/>
+				</div>
+			</div>
+
+			<div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Website URL</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="EnvyTheme.com"
+						value="{{recruitor.website_url}}"
+						name="website-url"
+					/>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Age</label>
+					<input type="text" class="form-control" placeholder="15" value="{{recruitor.age}}" name="user-age" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Education Level</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Btech"
+						value="{{recruitor.education_lvl}}"
+						name="education-level"
+					/>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Experience</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="4-8 Years"
+						value="{{recruitor.experience}}"
+						name="user-experience"
+					/>
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Description</label>
+					<textarea
+						cols="30"
+						rows="6"
+						placeholder="Short description about you..."
+						class="form-control"
+						name="user-description"
+					>
+{{recruitor.description}}</textarea
+					>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>City</label>
+					<input type="text" class="form-control" placeholder="Mumbai" value="{{recruitor.user_city}}" name="user-city" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Country</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="India"
+						value="{{recruitor.user_country}}"
+						name="user-country"
+					/>
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Complete Address</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Complete Address"
+						value="{{recruitor.user_addreass}}"
+						name="user-addreass"
+					/>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Facebook URL</label>
+					<input type="text" class="form-control" value="{{recruitor.facebook_url}}" name="facebook-url" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Twitter URL</label>
+					<input type="text" class="form-control" value="{{recruitor.twitter_url}}" name="twitter-url" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Linked In URL</label>
+					<input type="text" class="form-control" value="{{recruitor.linkedin_url}}" name="linkedin-url" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Instagram URL</label>
+					<input type="text" class="form-control" value="{{recruitor.insta_url}}" name="insta-url" />
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12">
+				<button type="submit" class="default-btn">Save Change </button>
+			</div>
+		</div>
+	</form>
+</div>
+<!-- End My Profile Area -->
+
+{% endblock body %}

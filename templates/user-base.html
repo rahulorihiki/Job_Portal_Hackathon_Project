@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl.css') }}" />
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/static/css/aos.css" />
+		<link rel="stylesheet" href="/static/css/animate.min.css" />
+		<link rel="stylesheet" href="/static/css/meanmenu.css" />
+		<link rel="stylesheet" href="/static/css/flaticon.css" />
+		<link rel="stylesheet" href="/static/css/remixicon.css" />
+		<link rel="stylesheet" href="/static/css/odometer.min.css" />
+		<link rel="stylesheet" href="/static/css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="/static/css/owl.theme.default.min.css" />
+		<link rel="stylesheet" href="/static/css/magnific-popup.min.css" />
+		<link rel="stylesheet" href="/static/css/fancybox.min.css" />
+		<link rel="stylesheet" href="/static/css/selectize.min.css" />
+		<link rel="stylesheet" href="/static/css/metismenu.min.css" />
+		<link rel="stylesheet" href="/static/css/simplebar.min.css" />
+		<link rel="stylesheet" href="/static/css/dropzone.min.css" />
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/static/css/navbar.css" />
+		<link rel="stylesheet" href="/static/css/footer.css" />
+		<link rel="stylesheet" href="/static/css/dashboard.css" />
+		<link rel="stylesheet" href="/static/css/responsive.css" />
+
+		<title>{% block title%}{% endblock title%}</title>
+		<!-- Our link to add icons -->
+		<link rel="icon" type="image/png" href="/static/images/favicon.png" />
+	</head>
+	<body class="px-0">
+		<!-- Start Sidemenu Area -->
+		<div class="sidemenu-area">
+			<div class="sidemenu-header">
+				<a href="http://127.0.0.1:9555/main-index/{{user.username}}/user" class="navbar-brand d-flex align-items-center">
+					<img src="/static/images/logo.png" alt="image" />
+				</a>
+
+				<div class="responsive-burger-menu d-block d-lg-none">
+					<span class="top-bar"></span>
+					<span class="middle-bar"></span>
+					<span class="bottom-bar"></span>
+				</div>
+			</div>
+
+			<div class="sidemenu-body">
+				<ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+					<li class="nav-item active">
+						<a href="{{url_for('user_profile', a = user.username)}}" class="nav-link">
+							<span class="icon"><i class="ri-home-line"></i></span>
+							<span class="menu-title">Dashboard</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="{{url_for('user_view_profile' , b = user.username)}}" class="nav-link">
+							<span class="icon"><i class="ri-user-line"></i></span>
+							<span class="menu-title">View Profile</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="http://127.0.0.1:9555/my-applied-jobs/{{user.username}}" class="nav-link">
+							<span class="icon"><i class="ri-file-list-line"></i></span>
+							<span class="menu-title">Applied Jobs</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="{{url_for('user_messages' , z = user.username)}}" class="nav-link">
+							<span class="icon"><i class="ri-briefcase-line"></i></span>
+							<span class="menu-title">Messages</span>
+						</a>
+					</li>
+
+                    <li class="nav-item">
+						<a href="{{url_for('resume' , d = user.username)}}" class="nav-link">
+							<span class="icon"><i class="ri-briefcase-line"></i></span>
+							<span class="menu-title">Your Resume</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="http://127.0.0.1:9555/change-password/{{user.username}}" class="nav-link">
+							<span class="icon"><i class="ri-notification-3-line"></i></span>
+							<span class="menu-title">Change Password</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="candidates-dashboard-shortlisted-job.html" class="nav-link">
+							<span class="icon"><i class="ri-bookmark-line"></i></span>
+							<span class="menu-title">Delete Profile</span>
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a href="http://127.0.0.1:9555/login" class="nav-link">
+							<span class="icon"><i class="ri-book-line"></i></span>
+							<span class="menu-title">Logout</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- End Sidemenu Area -->
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="container">
+                        <div class="main-responsive-menu">
+                            <div class="logo">
+                                <a href="http://127.0.0.1:9555/main-index/{{user.username}}/user">
+                                    <img src="/static/images/logo.png" alt="logo" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="main-navbar">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            
+    
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav m-auto">
+                                    <li class="nav-item">
+                                        <a href="http://127.0.0.1:9555/main-index/{{user.username}}/user" class="nav-link active">
+                                            Home
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-item">
+                                        <a href="http://127.0.0.1:9555/main-index/{{user.username}}/user#companyarea" class="nav-link">
+                                            Companies
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+    
+                                        <ul class="dropdown-menu">
+                                            {% for company in companies %}
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link">{{company[1]}}</a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+    
+                                    <li class="nav-item">
+                                        <a href="http://127.0.0.1:9555/main-index/{{user.username}}/user#categoryarea" class="nav-link">
+                                            Job Category
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+    
+                                        <ul class="dropdown-menu">
+                                            {% for category in categories %}
+                                            <li class="nav-item">
+                                                <a href="#" class="nav-link">{{category[1]}}</a>
+                                            </li>
+                                            {% endfor  %}
+                                        </ul>
+                                    </li>
+    
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            Job Search
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+    
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="http://127.0.0.1:5000/displayjobs/1/{{user.username}}" class="nav-link">Search by City</a>
+                                            </li>
+    
+                                            <li class="nav-item">
+                                                <a href="http://127.0.0.1:5000/displayjobs/2/{{user.username}}" class="nav-link">Search by Country</a>
+                                            </li>
+    
+                                            <li class="nav-item">
+                                                <a href="http://127.0.0.1:5000/displayjobs/3/{{user.username}}" class="nav-link">Search by Company Name</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="http://127.0.0.1:5000/displayjobs/4/{{user.username}}" class="nav-link">Search by Category Name</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="http://127.0.0.1:5000/displayjobs/5/{{user.username}}" class="nav-link">Search by Job Type</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="http://127.0.0.1:5000/displayjobs/6/{{user.username}}" class="nav-link">Search by Job Name</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+    
+                                    <li class="nav-item">
+                                        <a href="http://127.0.0.1:9555/main-index/{{user.username}}/user#aboutusarea" class="nav-link">
+                                            About Us
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                    </li>
+    
+                                    <li class="nav-item">
+                                        <a href="http://127.0.0.1:9555/main-index/{{user.username}}/user#contactarea" class="nav-link">
+                                            Contact Us
+                                            <i class="ri-arrow-down-s-line"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+    
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <div class="dropdown profile-nav-item">
+                                            <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <div class="menu-profile">
+                                                    <img src="/static/images/dashboard/user1.jpg" class="rounded-circle" alt="image">
+                                                    <span class="name">My Account</span>
+                                                </div>
+                                            </a>
+                
+                                            <div class="dropdown-menu">
+                                                <div class="dropdown-header d-flex flex-column align-items-center">
+                                                    <div class="figure mb-3">
+                                                        <img src="/static/images/dashboard/user1.jpg" class="rounded-circle" style="height: 130px;width: 130px;" alt="image">
+                                                    </div>
+                
+                                                    <div class="info text-center">
+                                                        <span class="name">{{user.username}}</span>
+                                                        <p class="mb-3 email">{{user.email}}</p>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="dropdown-body">
+                                                    <ul class="profile-nav p-0 pt-3">
+                                                        <li class="nav-item active">
+                                                            <a href="{{url_for('user_profile', a = user.username)}}" class="nav-link">
+                                                                <span class="icon"><i class="ri-home-line"></i></span>
+                                                                <span class="menu-title">Dashboard</span>
+                                                            </a>
+                                                        </li>
+    
+                                                        <li class="nav-item">
+                                                            <a href="dashboard-applicants.html" class="nav-link">
+                                                                <span class="icon"><i class="ri-file-list-line"></i></span>
+                                                                <span class="menu-title">All Applicants</span>
+                                                            </a>
+                                                        </li>
+                                    
+                                                        <li class="nav-item">
+                                                            <a href="candidates-dashboard-submit-resume.html" class="nav-link">
+                                                                <span class="icon"><i class="ri-bookmark-line"></i></span>
+                                                                <span class="menu-title">Submit Resumes</span>
+                                                            </a>
+                                                        </li>
+                                    
+                                                        <li class="nav-item">
+                                                            <a href="dashboard-packages.html" class="nav-link">
+                                                                <span class="icon"><i class="ri-stack-fill"></i></span>
+                                                                <span class="menu-title">Packages</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                
+                                                <div class="dropdown-footer">
+                                                    <ul class="profile-nav">
+                                                        <li class="nav-item">
+                                                            <a href="index.html" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Logout</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+            <!-- Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <h1>Howdy, {{ user.username}}!</h1>
+                <ol class="breadcrumb">
+                    <li class="item"><a href="candidates-dashboard.html">Home</a></li>
+                    <li class="item">Dashboard</li>
+                </ol>
+            </div>
+            <!-- End Breadcrumb Area -->
+            {% block body %}{% endblock body %}
+
+
+          <!-- Optional JavaScript; choose one of the two! -->
+		<script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+		<!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+	</body>
+</html>  

@@ -1,0 +1,22 @@
+{% extends 'admin-base.html' %} {% block title %} Approve Application {% endblock title %} {% block body %}
+
+<form action="/approve-application/{{username}}/{{companyemail}}/{{code}}" method="POST">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="form-group">
+                <label><h5>Enter Message :</h5> </label>
+                <textarea
+                    cols="30"
+                    rows="6"
+                    placeholder="Enter your message here..."
+                    class="form-control my-3"
+                    name="message"
+                ></textarea>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <button type="submit" class="default-btn" style="margin: 8px 2px;">Approve Application</button>
+        </div>
+    </div>   
+</form> 
+{% endblock body %}

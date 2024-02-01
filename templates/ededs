@@ -1,0 +1,131 @@
+<h3>Your Messages</h3>
+<div class="job-block-item">
+    <div class="row align-items-center">
+        <!-- <div class="col-lg-2 col-sm-2">
+            <div class="company-box-logo">
+                <a href="job-details-1.html"><img src="assets/images/job/job-1.png" alt="image"></a>
+            </div>
+        </div> -->
+
+        <div class="col-lg-12 col-sm-11">
+            <div class="job-list-inner-box">
+                <div class="row align-items-center">
+                    <div class="col-lg-9">
+                        <div class="job-list-box">
+                            <div class="job-information">
+                                <div class="title-box">
+                                    <h3>
+                                        <a href="job-details-1.html">Assistant Editor</a>
+                                    </h3>
+                                    <span>Solit IT Solution</span>
+                                </div>
+        
+                                <ul class="job-tag-list">
+                                    <li>Featured</li>
+                                    <li class="urgent">Urgent</li>
+                                    <li class="private">Private</li>
+                                    <li>Part Time</li>
+                                </ul>
+                            </div>
+
+                            <ul class="location-information">
+                                <li><i class="ri-time-line"></i> 3 Days Left</li>
+                                <li><i class="ri-map-pin-line"></i> 32, Walsh Street, USA</li>
+                                <li><i class="ri-time-line"></i> Part Time</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="job-list-optional">
+                            <a href="job-details-1.html" class="default-btn">Apply Jobs <i class="flaticon-list-1"></i></a>
+                            
+                            <div class="save-text">
+                                <span>2020-12-23 09:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="job-block-item">
+    <div class="row align-items-center">
+        <!-- <div class="col-lg-2 col-sm-2">
+            <div class="company-box-logo">
+                <a href="job-details-1.html"><img src="assets/images/job/job-1.png" alt="image"></a>
+            </div>
+        </div> -->
+
+        <div class="col-lg-12 col-sm-11">
+            <div class="job-list-inner-box">
+                <div class="row align-items-center">
+                    <div class="col-lg-9">
+                        <div class="job-list-box">
+                            <div class="job-information">
+                                <div class="title-box">
+                                    <h3>
+                                        <a href="job-details-1.html">Assistant Editor</a>
+                                    </h3>
+                                    <span>Solit IT Solution</span>
+                                </div>
+        
+                                <ul class="job-tag-list">
+                                    <li>Featured</li>
+                                    <li class="urgent">Urgent</li>
+                                    <li class="private">Private</li>
+                                    <li>Part Time</li>
+                                </ul>
+                            </div>
+
+                            <ul class="location-information">
+                                <li><i class="ri-time-line"></i> 3 Days Left</li>
+                                <li><i class="ri-map-pin-line"></i> 32, Walsh Street, USA</li>
+                                <li><i class="ri-time-line"></i> Part Time</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="job-list-optional">
+                            <a href="job-details-1.html" class="default-btn">Apply Jobs <i class="flaticon-list-1"></i></a>
+                            
+                            <div class="save-text">
+                                <span>2020-12-23 09:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

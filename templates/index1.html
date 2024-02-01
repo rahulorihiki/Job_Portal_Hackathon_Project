@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl.css') }}" />
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/static/css/aos.css" />
+		<link rel="stylesheet" href="/static/css/animate.min.css" />
+		<link rel="stylesheet" href="/static/css/meanmenu.css" />
+		<link rel="stylesheet" href="/static/css/flaticon.css" />
+		<link rel="stylesheet" href="/static/css/remixicon.css" />
+		<link rel="stylesheet" href="/static/css/odometer.min.css" />
+		<link rel="stylesheet" href="/static/css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="/static/css/owl.theme.default.min.css" />
+		<link rel="stylesheet" href="/static/css/magnific-popup.min.css" />
+		<link rel="stylesheet" href="/static/css/fancybox.min.css" />
+		<link rel="stylesheet" href="/static/css/selectize.min.css" />
+		<link rel="stylesheet" href="/static/css/metismenu.min.css" />
+		<link rel="stylesheet" href="/static/css/simplebar.min.css" />
+		<link rel="stylesheet" href="/static/css/dropzone.min.css" />
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/static/css/navbar.css" />
+		<link rel="stylesheet" href="/static/css/footer.css" />
+		<link rel="stylesheet" href="/static/css/dashboard.css" />
+		<link rel="stylesheet" href="/static/css/responsive.css" />
+
+		<title>{% block title%}{% endblock title%}</title>
+		<!-- Our link to add icons -->
+		<link rel="icon" type="image/png" href="/static/images/favicon.png" />
+	</head>
+	<body class="px-0">
+		<!-- Start Topbar Area -->
+		<div class="topbar-area">
+			<div class="container-fluid">
+				<div class="row align-items-center">
+					<div class="col-lg-11 col-md-6">
+						<ul class="topbar-social-list">
+							<li>
+								<a href="https://www.facebook.com/" target="_blank"><i class="ri-facebook-fill" style="font-size: 18px;"></i></a>
+							</li>
+							<li>
+								<a href="https://twitter.com/" target="_blank"><i class="ri-twitter-fill" style="font-size: 18px;"></i></a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-line" style="font-size: 18px;"></i></a>
+							</li>
+							<li>
+								<a href="https://linkedin.com/" target="_blank"><i class="ri-linkedin-box-fill" style="font-size: 18px;"></i></a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-lg-1 col-md-6">
+						<div class="dropdown text-end">
+							<a
+								href="#"
+								class="link-dark text-decoration-none dropdown-toggle"
+								id="dropdownUser1"
+								data-bs-toggle="dropdown"
+								aria-expanded="false"
+							>
+								<img src="https://github.com/mdo.png" alt="mdo" width="56" height="56" class="rounded-circle" />
+							</a>
+							<ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+								{% if user_type == "user" %}
+								<li><a class="dropdown-item" href="{{url_for('user_profile', a = user.username)}}">Dashboard</a></li>
+								{% endif %}
+								{% if user_type == "recruit" %}
+								<li><a class="dropdown-item" href="{{url_for('recruitor_profile', a = user.username)}}">Dashboard</a></li>
+								{% endif %}
+								<li><a class="dropdown-item" href="#">Settings</a></li>
+								<li><a class="dropdown-item" href="#">Profile</a></li>
+								<li><hr class="dropdown-divider" /></li>
+								<li><a class="dropdown-item" href="#">Sign out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Topbar Area -->
+
+		<!-- Start Navbar Area -->
+		<div class="navbar-area">
+			<div class="main-responsive-nav">
+				<div class="container">
+					<div class="main-responsive-menu">
+						<div class="logo">
+							<a href="index.html">
+								<img src="/static/images/logo.png" alt="logo" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-navbar">
+				<div class="container-fluid">
+					<nav class="navbar navbar-expand-md navbar-light">
+						<a class="navbar-brand" href="index.html">
+							<img src="/static/images/logo.png" alt="logo" />
+						</a>
+
+						<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+							<ul class="navbar-nav m-auto">
+								<li class="nav-item">
+									<a href="#" class="nav-link active"> Home </a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#companyarea" class="nav-link">
+										Companies
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+
+									<ul class="dropdown-menu">
+										{% for company in companies %}
+										<li class="nav-item">
+											<a href="job-listing-1.html" class="nav-link">{{company[1]}}</a>
+										</li>
+										{% endfor %}
+									</ul>
+								</li>
+
+								<li class="nav-item">
+									<a href="#categoryarea" class="nav-link">
+										Job Category
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+
+									<ul class="dropdown-menu">
+										{% for category in categories %}
+										<li class="nav-item">
+											<a href="candidates-1.html" class="nav-link">{{category[1]}}</a>
+										</li>
+										{% endfor %}
+									</ul>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										Job Search
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+
+									<ul class="dropdown-menu">
+										<li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/1/{{user.username}}" class="nav-link"
+												>Search by City</a
+											>
+										</li>
+
+										<li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/2/{{user.username}}" class="nav-link"
+												>Search by Country</a
+											>
+										</li>
+
+										<li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/3/{{user.username}}" class="nav-link"
+												>Search by Company Name</a
+											>
+										</li>
+										<li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/4/{{user.username}}" class="nav-link"
+												>Search by Category Name</a
+											>
+										</li>
+										<li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/5/{{user.username}}" class="nav-link"
+												>Search by Job Type</a
+											>
+										</li>
+										<li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/6/{{user.username}}" class="nav-link"
+												>Search by Job Name</a
+											>
+										</li>
+									</ul>
+								</li>
+
+								<li class="nav-item">
+									<a href="#aboutusarea" class="nav-link">
+										About Us
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#contactarea" class="nav-link">
+										Contact Us
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- End Navbar Area -->
+
+		<!-- Start Main Banner Area -->
+		<div class="main-banner-area">
+			<div class="container">
+				{% if applied == "yes" %}
+				<div class="alert alert-success alert-dismissible fade show px-6" role="alert">
+					<strong>Success!!!</strong> . Your Application has been recieved , You should check your messages for confirmation and further details. The Recruitor will soon contact you based onyour resume.
+					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+				  </div>
+				{% endif %}
+				<div class="row align-items-center">
+					<div class="col-lg-5 col-md-12">
+						<div class="main-banner-text-with-image">
+							<img src="/static/images/main-banner/banner-one/eeza-text-gif.gif" alt="gif" />
+						</div>
+					</div>
+
+					<div class="col-lg-7 col-md-12">
+						<div class="main-banner-content">
+							{% if user_type == "user" %}
+							<h1>Find A Perfect Job For Your better Future</h1>
+							<p>
+								Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore
+								et dolore magna aliquyam erat sed diam voluptua.
+							</p>
+							{% endif %}
+							<!-- <div class="banner-btn">
+								<a href="candidates-1.html" class="default-btn">Browse Candidates <i class="flaticon-list-1"></i></a>
+							</div> -->
+							{% if user_type == "recruit" %}
+							<h1>Find A Perfect Candidate For Your Company</h1>
+							<p>
+								Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore
+								et dolore magna aliquyam erat sed diam voluptua.
+							</p>
+							{% endif %}
+							<div class="layer-shape" data-aos="fade-down" data-aos-delay="80" data-aos-duration="800">
+								<img src="/static/images/main-banner/banner-one/layer.png" alt="image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Main Banner Area -->
+
+		<!-- Start Play Video Area -->
+		<div class="play-video-area ptb-100">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-7 col-md-12">
+						<div class="play-video-image">
+							<img src="/static/images/play-video/play-video.jpg" alt="image" />
+						</div>
+					</div>
+
+					<div class="col-lg-5 col-md-12">
+						<div class="play-video-content">
+							<div class="play-btn">
+								<a href="https://www.youtube.com/watch?v=ODfy2YIKS1M" class="video-btn popup-youtube">
+									<i class="ri-play-line"></i>
+								</a>
+							</div>
+							{% if user_type == "user" %}
+							<h3>See How Jobify Helps You To Find a Perfect Job</h3>
+							{% endif %}
+							{% if user_type == "recruit" %}
+							<h3>See How Jobify Helps You To Find a Perfect Candidate</h3>
+							{% endif %}
+							<div class="layer-shape">
+								<img src="/static/images/play-video/layer.png" alt="image" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Play Video Area -->
+
+		<!-- Start About Area -->
+		<div class="about-area ptb-50 mtb-50" id="aboutusarea">
+			<div class="container">
+				<div class="row align-items-center">
+					<h1>About Us</h1>
+					<div class="col-lg-6 col-md-12">
+						<div class="about-image">
+							<img src="/static/images/about/about-1.png" alt="image" />
+						</div>
+					</div>
+
+					<div class="col-lg-6 col-md-12">
+						<div class="about-content">
+							{% if user_type == "user" %}
+							<h3>Jobify Is A Trustworthy Place To Find Your Dream Job</h3>
+							<p>
+								Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore
+								et dolore magna aliquyam erat.
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore
+								et dolore magna aliquyam erat sed diam voluptua.
+							</p>
+							{% endif %}
+							{% if user_type == "recruit" %}
+							<h3>Jobify Is A Trustworthy Place To Find employees for your Company</h3>
+							<p>
+								Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore
+								et dolore magna aliquyam erat.
+							</p>
+							<p>
+								Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore
+								et dolore magna aliquyam erat sed diam voluptua.
+							</p>
+							{% endif %}
+							<div class="row">
+								<div class="col-lg-6 col-sm-6 col-md-6 col-6">
+									<div class="about-fun-fact">
+										<h3>
+											<span class="odometer" data-count="25">10</span>
+											<span class="sign-icon">+</span>
+										</h3>
+										<p>YEARS EXPERIENCE</p>
+									</div>
+								</div>
+
+								<div class="col-lg-6 col-sm-6 col-md-6 col-6">
+									<div class="about-fun-fact">
+										<h3>
+											<span class="odometer">10</span>
+											<span class="sign-icon">+</span>
+										</h3>
+										<p>AWARDS WINNING</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- <div class="about-btn">
+								<a href="about-us.html" class="default-btn">More About Us <i class="flaticon-plus"></i></a>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End About Area -->
+
+		<!-- Start Job Seeker Area -->
+		{% if user_type == "user" %}
+		<div class="job-seeker-area pt-100 pb-75">
+			<div class="container">
+				
+				<div class="section-title">
+					
+					<h2>How Jobify Works For The Job Seeker</h2>
+					<p>
+						Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et
+						dolore magna aliquyam erat.
+					</p>
+					
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-lg-4 col-md-6">
+						<div class="single-job-seeker-card">
+							<div class="seeker-image">
+								<img src="/static/images/job-seeker/seeker-1.png" alt="image" />
+							</div>
+							<h3>Create Account</h3>
+
+							<div class="step">Step 1</div>
+						</div>
+
+						<div class="seeker-arrow-icon">
+							<img src="/static/images/job-seeker/layer-1.png" alt="image" />
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<div class="single-job-seeker-card">
+							<div class="seeker-image">
+								<img src="/static/images/job-seeker/seeker-2.png" alt="image" />
+							</div>
+							<h3>Submit Resume</h3>
+
+							<div class="step">Step 2</div>
+						</div>
+
+						<div class="seeker-arrow-icon">
+							<img src="/static/images/job-seeker/layer-2.png" alt="image" />
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-md-6">
+						<div class="single-job-seeker-card">
+							<div class="seeker-image">
+								<img src="/static/images/job-seeker/seeker-3.png" alt="image" />
+							</div>
+							<h3>Apply Jobs</h3>
+
+							<div class="step">Step 3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+		<!-- End Job Seeker Ar/static-->
+
+		<!-- Start Top Category Area -->
+		<div class="top-category-area ptb-100" id="categoryarea">
+			<div class="container">
+				<div class="section-title-wrap">
+					<div class="row align-items-center">
+						<div class="col-lg-9 col-md-12">
+							<div class="title-content">
+								<h2>Available Job Categories</h2>
+							</div>
+						</div>
+
+						<!-- <div class="col-lg-3 col-md-12">
+							<div class="title-btn">
+								<a href="job-listing-1.html" class="default-btn">View All Category <i class="flaticon-list-1"></i></a>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+
+			<div class="container-fluid">
+				<div class="row top-category-slides owl-theme justify-content-center">
+					{% for category in categories %}
+					<div class="top-category-card col-lg-3 col-md-6">
+						<div class="category-image">
+							<img src="/static/images/category/category-1.png" alt="image" />
+						</div>
+
+						<h3><a href="job-listing-2.html">{{category[1]}}</a></h3>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+
+		<!-- End Top Category Area -->
+
+		<!-- Start Mobile App Area -->
+		
+		<!-- End Mobile App Area -->
+		<!-- Start Job List Area -->
+		<div class="job-list-area ptb-100" id="companyarea">
+			<div class="container">
+				<div class="section-title">
+					<h2>Featured Company List</h2>
+					<p>
+						Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et
+						dolore magna aliquyam erat.
+					</p>
+				</div>
+
+				<div class="row justify-content-center">
+					{% for company in companies %}
+					<div class="col-lg-4 col-md-6">
+						<div class="single-job-list-box">
+							<div class="job-information">
+								<div class="company-logo">
+									<a href="job-details-1.html"><img src="/static/images/job/job-1.png" alt="image" /></a>
+								</div>
+								<h3>
+									<a href="job-details-1.html">{{company[1]}}</a>
+								</h3>
+								<span>{{company[3]}}</span>
+
+								<div class="bookmark-btn">
+									<i class="ri-bookmark-line"></i>
+								</div>
+
+								<div class="hover-bookmark-btn">
+									<i class="ri-bookmark-fill"></i>
+								</div>
+							</div>
+
+							<ul class="job-tag-list">
+								<li>Featured</li>
+								<li class="urgent">Urgent</li>
+								<li class="private">Private</li>
+								<li>Part Time</li>
+							</ul>
+
+							<ul class="location-information">
+								<li style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">
+									<i class="ri-time-line"></i> {{company[5]}}
+								</li>
+								<li><i class="ri-map-pin-line"></i> {{company[2]}}</li>
+								<li><i class="ri-time-line"></i> {{company[4]}}</li>
+								<li><i class="ri-time-line"></i> {{company[6]}}</li>
+							</ul>
+
+							<!-- <div class="job-btn">
+								<a href="job-details-1.html" class="default-btn">Apply Jobs <i class="flaticon-list-1"></i></a>
+							</div> -->
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+		<!-- End Job List Area -->
+
+		
+		<div class="contact-area ptb-100" id="contactarea">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="contact-address">
+							<h3>Contact Information</h3>
+
+							<ul class="address-info">
+								<li>
+									<i class="ri-map-pin-line"></i>
+									  Mumbai, India
+								</li>
+
+								<li>
+									<i class="ri-phone-line"></i>
+									<a href="tel:+9101361246725">(+91)01361246725</a>
+								</li>
+
+								<li>
+									<i class="ri-mail-line"></i>
+									<a href="mailto:jobify@gmail.com">jobify@gmail.com</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-8 col-md-12">
+						<div class="contact-form">
+							<h3>Get In Touch</h3>
+
+							<form id="contactForm">
+								<div class="row">
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group">
+											<input
+												type="text"
+												class="form-control"
+												placeholder="Your Name"
+												required
+												data-error="Please enter your name"
+											/>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group">
+											<input
+												type="email"
+												class="form-control"
+												placeholder="Your Email"
+												required
+												data-error="Please enter your email"
+											/>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group">
+											<input
+												type="email"
+												class="form-control"
+												placeholder="Subject"
+												required
+												data-error="Please enter your subject"
+											/>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group">
+											<input
+												type="email"
+												class="form-control"
+												placeholder="Phone No"
+												required
+												data-error="Please enter your number"
+											/>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+
+									<div class="col-lg-12 col-md-12">
+										<div class="form-group">
+											<textarea
+												placeholder="Your Comments"
+												class="form-control"
+												required
+												data-error="Write your message"
+											></textarea>
+											<div class="help-block with-errors"></div>
+										</div>
+									</div>
+
+									<div class="col-lg-12 col-md-12">
+										<p class="form-cookies-consent">
+											<input type="checkbox" id="test1" />
+											<label for="test1">I Accept All <a href="terms-of-service.html">Terms & Conditions</a></label>
+										</p>
+									</div>
+
+									<div class="col-lg-12 col-md-12">
+										<button type="submit" class="default-btn">Send Message</button>
+										<div id="msgSubmit" class="h3 text-center hidden"></div>
+										<div class="clearfix"></div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Contact Area -->
+
+		<!-- Start Footer Area -->
+		<footer class="footer-area pt-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<div class="widget-logo">
+								<a href="index.html"><img src="/static/images/logo-2.png" alt="image" /></a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consetet ur sadipscing elitr sed diam nonumy eirmod tempor invidunt labore.
+							</p>
+
+							<ul class="widget-social-links">
+								<li><span>Follow:</span></li>
+
+								<li>
+									<a href="https://www.facebook.com/" target="_blank">
+										<i class="ri-facebook-circle-line"></i>
+									</a>
+								</li>
+
+								<li>
+									<a href="https://twitter.com/" target="_blank">
+										<i class="ri-twitter-line"></i>
+									</a>
+								</li>
+
+								<li>
+									<a href="https://www.instagram.com/" target="_blank">
+										<i class="ri-instagram-line"></i>
+									</a>
+								</li>
+
+								<li>
+									<a href="https://www.linkedin.com/" target="_blank">
+										<i class="ri-linkedin-box-line"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget ps-5">
+							<h3>Company</h3>
+
+							<ul class="quick-links">
+								<li><a href="about-us.html">About Jobify</a></li>
+								<li><a href="job-listing-2.html">Browse Jobs</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="candidates-dashboard.html">Candidate Dashboard</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<h3>Resources</h3>
+
+							<ul class="quick-links">
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="dashboard-post-job.html">Post A Job</a></li>
+								<li><a href="candidates-1.html">Candidates</a></li>
+								<li><a href="privacy-policy.html">Privacy Policy</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<h3>Quick Contact</h3>
+
+							<ul class="widget-info">
+								<li>
+									<i class="ri-map-pin-line"></i>
+									Mumbai, India
+								</li>
+
+								<li>
+									<i class="ri-phone-line"></i>
+									<a href="tel:00901361246725">(+91)01361246725</a>
+								</li>
+
+								<li>
+									<i class="ri-mail-line"></i>
+									<a href="mailto:hello@gmail.com">jobify@gmail.com</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright-area">
+				<div class="container">
+					<p>
+						<i class="ri-copyright-line"></i> 2022 Jobify. All Rights Reserved by
+						<a href="https://envytheme.com/" target="_blank">Jobify Pvt Ltd</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Area -->
+
+		<!-- Optional JavaScript; choose one of the two! -->
+		<script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+		<!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+	</body>
+</html>

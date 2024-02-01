@@ -1,0 +1,363 @@
+{% extends "user-base.html" %} {% block title %} Your Dashboard {% endblock title %} {% block body %}
+
+<!-- Start My Profile Area -->
+<div class="my-profile-box row">
+	<h4 class="mt-4 col-lg-6 col-md-12">Your Resume Details</h4>
+	<a class="rahulbs col-lg-3 col-md-12 mt-4 " href="{{url_for('viewresume' , e = user.username)}}" target="_blank" style="text-align: center;">Generate Resume</a>
+	<form action="/update-resume/{{user.username}}"   method="POST" >
+		<div class="row">
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Username</label>
+					<input type="text" class="form-control" placeholder="Andy Smith" value="{{user.username}}" name="username3" disabled />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Email Addreass</label>
+					<input
+						type="email"
+						class="form-control"
+						placeholder="hello@andysmith.com"
+						name="email3"
+						value= "{{resume.emailaddr}}"
+					/>
+				</div>
+			</div>
+
+            <div class="col-xl-12 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Your Name</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Enter your name here"
+						name="myname3"
+						value="{{resume.name}}"
+					/>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Job Title</label>
+					<input type="text" class="form-control"  name="jobtitle3" 
+					value="{{resume.job_title}}" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Phone</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="+88 (123) 123456"
+						name="phonenumber3"
+						value="{{resume.contactno}}"
+					/>
+				</div>
+			</div>
+
+			<div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Linked-In URL</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="EnvyTheme.com"
+						name="linkedinurl3"
+						value="{{resume.linkedin_url}}"
+					/>
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Your short description</label>
+					<textarea
+						cols="30"
+						rows="6"
+						placeholder="Short description about you..."
+						class="form-control"
+						name="mydescription3"
+					>{{resume.profile_desc}}</textarea
+					>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>City</label>
+					<input type="text" class="form-control" placeholder="Mumbai" name="city3" value="{{resume.city}}" />
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>State</label>
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Maharashtra"
+						name="state3"
+						value="{{resume.state}}"
+					/>
+				</div>
+			</div>
+
+            <h4>Enter your top 5 professional Skills</h4>
+
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Skill - 1</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="s1"
+						value="{{resume.pfs1}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Skill - 2</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="s2"
+						value="{{resume.pfs2}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Skill - 3</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="s3"
+						value="{{resume.pfs3}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Skill - 4</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="s4"
+						value="{{resume.pfs4}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Skill - 5</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="s5"
+						value="{{resume.pfs5}}"
+					/>
+				</div>
+			</div>
+
+            <h4>Your Latest Work Experience</h4>
+
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Joining Year</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="joinyear3"
+						value="{{resume.exp_joining_year}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Company Name</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="compname3"
+						value="{{resume.exp_company_name}}"
+						
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Job-Title</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="title3"
+						value="{{resume.exp_job_title}}"
+					/>
+				</div>
+			</div>
+            
+            <div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Short Description of your time in the previous company</label>
+					<textarea
+						cols="30"
+						rows="6"
+						placeholder="Short description..."
+						class="form-control"
+                        name="compexp3"
+					>{{resume.exp_job_desc}}</textarea
+					>
+				</div>
+			</div>
+
+
+            <h4>Enter your top 3 Languages</h4>
+
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Language - 1</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="l1"
+						value="{{resume.l1}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Language - 2</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="l2"
+						value="{{resume.l2}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Language - 3</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="l3"
+						value="{{resume.l3}}"
+					/>
+				</div>
+			</div>
+
+            <h4>Enter Your Education Details</h4>
+
+            <h6>10th Details</h6>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Percentage</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="percentage10"
+						value="{{resume.percentage10}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Name of the Institute</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="institute10"
+						value="{{resume.institute10}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Institute Board</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="board10"
+						value="{{resume.board10}}"
+					/>
+				</div>
+			</div>
+            <h6>12th Details</h6>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Percentage</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="percentage12"
+						value="{{resume.percentage12}}"
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Name of the Institute</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="institute12"
+						value="{{resume.institute12}}"	
+					/>
+				</div>
+			</div>
+            <div class="col-xl-4 col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Institute Board</label>
+					<input
+						type="text"
+						class="form-control"
+                        name="board12"
+						value="{{resume.board12}}"
+					/>
+				</div>
+			</div>
+            <div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					<label>Other Education Details</label>
+					<textarea
+						cols="30"
+						rows="6"
+						placeholder="Other Education Details..."
+						class="form-control"
+                        name="other3"
+					>{{resume.others_education}}</textarea
+					>
+				</div>
+			</div>
+
+            <h4>Other Interests</h4>
+            <div class="col-lg-12 col-md-12">
+				<div class="form-group">
+					
+					<textarea
+						cols="30"
+						rows="6"
+						placeholder="Other Interests..."
+						class="form-control"
+                        name="otherinterest3"
+					>{{resume.interest}}</textarea
+					>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-12">
+				<button type="submit" class="default-btn">Update Resume <i class="flaticon-send"></i></button>
+			</div>
+			
+		</div>
+	</form>
+</div>
+<!-- End My Profile Area -->
+
+{% endblock body %}

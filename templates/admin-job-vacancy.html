@@ -1,0 +1,46 @@
+{% extends 'admin-base.html'%} {% block title%} Check Vacancy {% endblock title%} {% block body %}
+
+<div class="packages-box">
+	<h2>List of Job Vacany</h2>
+
+	<div class="packages-table table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>Job Name</th>
+					<th>Company Name</th>
+					<th>Expiry</th>
+					<th>Employment Type</th>
+					<th>Required Employee</th>
+                    <th>Recruitor ID</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for data in jobdata %}
+				<tr>
+					<td><a href="/jobdetails-2/{{data.sno}}">{{data.job_name}}</a></td>
+					<td>{{data.company_name}}</td>
+					<td>{{data.deadline}}</td>
+					<td>{{data.employment_type}}</td>
+					<td>{{data.required_employee}}</td>
+                    <td>{{data.recruitor_code}}</td>
+					<td>
+						<a
+							href="http://127.0.0.1:5000/delete-jobvacancy/{{data.sno}}"
+							type="button"
+							class="btn btn-dark btn-sm mx-1"
+							style="color: white"
+							>Delete<i class="ri-delete-bin-line" style="font-size: 13px; padding: 5px;"></i></a
+						>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+{% endblock body %}

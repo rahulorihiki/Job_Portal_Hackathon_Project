@@ -1,0 +1,51 @@
+{% extends "user-base.html" %} {% block title %} Your Applied Jobs {% endblock title %} {% block body %}
+
+
+ <!-- Start Applied Jobs Area -->
+ <div class="dashboard-jobs-box">
+    <h2>My Applied Jobs</h2>
+    <div class="row">
+        {% for job in jobdetails %}
+        <div class="col-lg-6 col-md-12">
+            <div class="dashboard-job-card">
+                <div class="job-content">
+                    <div class="company-logo">
+                        <a href="job-details-1.html"><img src="/static/images/job/job-1.png" alt="image"></a>
+                    </div>
+                    <h3>
+                        <a href="job-details-1.html">{{job[0][1]}}</a>
+                    </h3>
+                    <h5>{{job[0][4]}}</h5>
+                    <div class="bookmark-btn">
+                        <i class="ri-bookmark-line"></i>
+                    </div>
+                    <div class="hover-bookmark-btn">
+                        <i class="ri-bookmark-fill"></i>
+                    </div>
+                    <ul class="location-information">
+                        <li><i class="ri-briefcase-line"></i> {{job[0][3]}}</li>
+                        <li><i class="ri-map-pin-line"></i> {{job[0][15]}}</li>
+                        <li><i class="ri-money-dollar-circle-line"></i> {{job[0][6]}}</li>
+                    </ul>
+                    <ul class="job-tag-list">
+                        <li>{{job[0][8]}}</li>
+                        <li class="urgent">Urgent</li>
+                        <li class="private">Private</li>
+                    </ul>
+                    <ul class="option-list">
+                        <li>
+                            <a href="http://127.0.0.1:9555/my-applied-jobs/delete/{{user.username}}/{{job[0][7]}}" class="option-bt d-inline-block"  title="Delete Application"><i class="ri-delete-bin-5-line" style="font-size: 20px; padding: 4px; margin: 2px;"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://127.0.0.1:5000/jobdetails-2/{{job[0][0]}}" class="option-bt d-inline-block"  title="View Job Details"><i class="ri-eye-line" style="font-size: 20px;"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- End Applied Jobs Area -->
+
+{% endblock body %}

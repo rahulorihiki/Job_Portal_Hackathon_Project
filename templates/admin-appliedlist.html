@@ -1,0 +1,57 @@
+{% extends 'admin-base.html' %} {% block title %} Job Applicants {% endblock title %} {% block body %}
+
+<div class="manage-jobs-box">
+    <h3>Total Applicant List</h3>
+</div>
+<div class="manage-jobs-table table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Job Name</th>
+                <th>Company Name</th>
+                <th>Company Email</th>
+                <th>Recruitor Code</th>
+                <th>Application Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for applicant in totalappli %}
+            <tr>
+                <td>
+                    <h5>{{ applicant[0]}}</h5>
+                    <span><i class="ri-map-pin-line"></i> {{applicant[1]}}</span>
+                </td>
+                <td><a href="#">{{applicant[2]}}</a></td>
+                <td>{{applicant[3]}}</td>
+                <td>{{applicant[5]}}</td>
+                <td>{{applicant[6]}}</td>
+                <td>{{applicant[4]}}</td>
+                <td>
+                    <a href="#" type="button" class="btn btn-dark btn-sm mx-1" style="color: white">Remove Applicant <i class="ri-delete-bin-line" style="font-size: 13px; padding: 5px;"></i></a>
+                </td>
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</div>
+<!-- End Manage Jobs Area -->
+
+<!-- Start Copyright Area -->
+<div class="copyrights-area">
+    <div class="row align-items-center">
+        <div class="col-lg-6 col-sm-6 col-md-6">
+            <p><i class="ri-copyright-line"></i> 2022 <a href="#">Jobify</a>. All rights reserved</p>
+        </div>
+
+    
+</div>
+</div>
+<!-- End Copyright Area -->
+
+
+{% endblock body %}

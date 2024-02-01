@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styl.css') }}" />
+		<link rel="stylesheet" href="/static/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="/static/css/aos.css" />
+		<link rel="stylesheet" href="/static/css/animate.min.css" />
+		<link rel="stylesheet" href="/static/css/meanmenu.css" />
+		<link rel="stylesheet" href="/static/css/flaticon.css" />
+		<link rel="stylesheet" href="/static/css/remixicon.css" />
+		<link rel="stylesheet" href="/static/css/odometer.min.css" />
+		<link rel="stylesheet" href="/static/css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="/static/css/owl.theme.default.min.css" />
+		<link rel="stylesheet" href="/static/css/magnific-popup.min.css" />
+		<link rel="stylesheet" href="/static/css/fancybox.min.css" />
+		<link rel="stylesheet" href="/static/css/selectize.min.css" />
+		<link rel="stylesheet" href="/static/css/metismenu.min.css" />
+		<link rel="stylesheet" href="/static/css/simplebar.min.css" />
+		<link rel="stylesheet" href="/static/css/dropzone.min.css" />
+		<link rel="stylesheet" href="/static/css/style.css" />
+		<link rel="stylesheet" href="/static/css/navbar.css" />
+		<link rel="stylesheet" href="/static/css/footer.css" />
+		<link rel="stylesheet" href="/static/css/dashboard.css" />
+		<link rel="stylesheet" href="/static/css/responsive.css" />
+
+		<title>{% block title%}{% endblock title%}</title>
+		<!-- Our link to add icons -->
+		<link rel="icon" type="image/png" href="/static/images/favicon.png" />
+	</head>
+	<div class="px-0">
+		<!-- Start Header Area -->
+        <div style="background: url(/static/images/4555-overlay.jpg)
+        center center/cover no-repeat;">
+		<header class="main-header-area">
+			<!-- Start Topbar Area -->
+			<div class="topbar-area">
+				<div class="container-fluid">
+					<div class="row align-items-center">
+						<div class="col-lg-5 col-md-6">
+							<ul class="topbar-social-list">
+								<li>
+									<a href="https://www.facebook.com/" target="_blank"><i class="ri-facebook-fill"></i></a>
+								</li>
+								<li>
+									<a href="https://twitter.com/" target="_blank"><i class="ri-twitter-fill"></i></a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-line"></i></a>
+								</li>
+								<li>
+									<a href="https://linkedin.com/" target="_blank"><i class="ri-linkedin-box-fill"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End Topbar Area -->
+
+			<!-- Start Navbar Area -->
+		<div class="navbar-area">
+			<div class="main-responsive-nav">
+				<div class="container">
+					<div class="main-responsive-menu">
+						<div class="logo">
+							<a href="index.html">
+								<img src="/static/images/jobify-transparent.png" alt="logo" />
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main-navbar">
+				<div class="container-fluid">
+					<nav class="navbar navbar-expand-md navbar-light">
+						<a class="navbar-brand" href="index.html">
+							<img src="/static/images/logo_trans.png" alt="logo" />
+						</a>
+
+						<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+							<ul class="navbar-nav m-auto">
+								<li class="nav-item">
+									<a href="http://127.0.0.1:9555/main-index/{{user[0][1]}}" class="nav-link active">
+										Home
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="http://127.0.0.1:9555/main-index/{{user[0][1]}}#companyarea" class="nav-link">
+										Companies
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+
+									<ul class="dropdown-menu">
+										{% for company in companies %}
+										<li class="nav-item">
+											<a href="#" class="nav-link">{{company.comapanynaam}}</a>
+										</li>
+										{% endfor %}
+									</ul>
+								</li>
+
+								<li class="nav-item">
+									<a href="http://127.0.0.1:9555/main-index/{{user[0][1]}}#categoryarea" class="nav-link">
+										Job Category
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+
+									<ul class="dropdown-menu">
+										{% for category in categories %}
+										<li class="nav-item">
+											<a href="#" class="nav-link">{{category.categorynaam}}</a>
+										</li>
+										{% endfor  %}
+									</ul>
+								</li>
+
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										Job Search
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+
+									<ul class="dropdown-menu">
+										<li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/1/{{user[0][1]}}" class="nav-link">Search by City</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/2/{{user[0][1]}}" class="nav-link">Search by Country</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/3/{{user[0][1]}}" class="nav-link">Search by Company Name</a>
+										</li>
+                                        <li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/4/{{user[0][1]}}" class="nav-link">Search by Category Name</a>
+										</li>
+                                        <li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/5/{{user[0][1]}}" class="nav-link">Search by Job Type</a>
+										</li>
+                                        <li class="nav-item">
+											<a href="http://127.0.0.1:5000/displayjobs/6/{{user[0][1]}}" class="nav-link">Search by Job Name</a>
+										</li>
+									</ul>
+								</li>
+
+								<li class="nav-item">
+									<a href="http://127.0.0.1:9555/main-index/{{user[0][1]}}#aboutusarea" class="nav-link">
+										About Us
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="http://127.0.0.1:9555/main-index/{{user[0][1]}}#contactarea" class="nav-link">
+										Contact Us
+										<i class="ri-arrow-down-s-line"></i>
+									</a>
+								</li>
+							</ul>
+
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- End Navbar Area -->
+		</header>
+		<!-- End Header Area -->
+
+		<!-- Start Page Banner Area -->
+		<div class="page-banner-area item-bg-two">
+			<div class="d-table">
+				<div class="d-table-cell">
+					<div class="container">
+						
+						<div class="page-banner-content">
+							<h2>Job Listing  </h2>
+							<h3 style="color: white;" >- {% block parameter %}{% endblock parameter  %}</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+		<!-- End Page Banner Area -->
+
+		<!-- Start Job List Area -->
+		<div class="job-list-area pb-100">
+			{% block body%}{% endblock body %}
+		</div>
+		<!-- End Job List Area -->
+
+		<!-- Start Footer Area -->
+		<footer class="footer-area pt-100">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<div class="widget-logo">
+								<a href="index.html"><img src="/static/images/logo-2.png" alt="image" /></a>
+							</div>
+							<p>
+								Lorem ipsum dolor sit amet consetet ur sadipscing elitr sed diam nonumy eirmod tempor invidunt labore.
+							</p>
+
+							<ul class="topbar-social-list">
+								<li>
+									<a href="https://www.facebook.com/" target="_blank"><i class="ri-facebook-fill" style="font-size: 18px;"></i></a>
+								</li>
+								<li>
+									<a href="https://twitter.com/" target="_blank"><i class="ri-twitter-fill" style="font-size: 18px;"></i></a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-line" style="font-size: 18px;"></i></a>
+								</li>
+								<li>
+									<a href="https://linkedin.com/" target="_blank"><i class="ri-linkedin-box-fill" style="font-size: 18px;"></i></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget ps-5">
+							<h3>Company</h3>
+
+							<ul class="quick-links">
+								<li><a href="about-us.html">About Eeza</a></li>
+								<li><a href="job-listing-2.html">Browse Jobs</a></li>
+								<li><a href="contact.html">Contact Us</a></li>
+								<li><a href="candidates-dashboard.html">Candidate Dashboard</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<h3>Resources</h3>
+
+							<ul class="quick-links">
+								<li><a href="blog.html">Blog</a></li>
+								<li><a href="dashboard-post-job.html">Post A Job</a></li>
+								<li><a href="candidates-1.html">Candidates</a></li>
+								<li><a href="privacy-policy.html">Privacy Policy</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-lg-3 col-sm-6">
+						<div class="single-footer-widget">
+							<h3>Quick Contact</h3>
+
+							<ul class="widget-info">
+								<li>
+									<i class="ri-map-pin-line"></i>
+									Mumbai, India
+								</li>
+
+								<li>
+									<i class="ri-phone-line"></i>
+									<a href="tel:00901361246725">(+91)01361246725</a>
+								</li>
+
+								<li>
+									<i class="ri-mail-line"></i>
+									<a href="mailto:hello@eeza.com">jobify@eeza.com</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright-area">
+				<div class="container">
+					<p>
+						<i class="ri-copyright-line"></i> 2021 Jobify. All Rights Reserved by
+						<a href="https://envytheme.com/" target="_blank">Jobify</a>
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer Area -->
+
+		<!-- Start Go Top Area -->
+		<div class="go-top">
+			<i class="ri-arrow-up-line"></i>
+		</div>
+		<!-- End Go Top Area -->
+
+		<!-- Optional JavaScript; choose one of the two! -->
+		<script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+		<!-- <script src="assets/js/bootstrap.bundle.min.js"></script> -->
+		<!-- Option 1: Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- Option 2: Separate Popper and Bootstrap JS -->
+		<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+	</body>
+</html>

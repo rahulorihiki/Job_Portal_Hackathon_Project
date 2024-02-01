@@ -1,0 +1,59 @@
+{% extends 'admin-base.html' %} {% block title %} Admin-Display Category {% endblock title %} {% block body %}
+
+<div class="job-list-search-box">
+	<form class="job-list-search-form" action="/add&displaycategories" method="POST">
+		<div class="row justify-content-center">
+			<div class="col-lg-12 col-md-12">
+				<label>
+					<h2 class="my-3">Add Job Category:</h2>
+				</label>
+				<div class="form-group">
+					<input class="form-control mb-3" type="text" placeholder="Enter the Job Category" name="category" />
+				</div>
+			</div>
+
+			<div class="search-btn mt-4">
+				<button type="submit"></button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="packages-box">
+	<h2>List of Job Categories</h2>
+
+	<div class="packages-table table-responsive">
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>SNo</th>
+					<th>Job Category</th>
+					<th>Date Created</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				{% for category in categorylist1 %}
+				<tr>
+					<td>{{loop.index}}</td>
+					<td>{{category.categorynaam}}</td>
+					<td>{{category.datecreatednaam}}</td>
+					<td>
+						<a
+							href="{{url_for('delete_category', a = category.categorynaam)}}"
+							type="button"
+							class="btn btn-dark btn-sm mx-1"
+							style="color: white"
+							>Delete <i class="ri-delete-bin-line" style="font-size: 13px; padding: 5px;"></i></a
+						>
+					</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- Start Packages Area -->
+
+{% endblock body %}
